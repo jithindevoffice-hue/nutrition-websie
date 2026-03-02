@@ -1,0 +1,305 @@
+.programs {
+    background-color: var(--color-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.headerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+.subtitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.subtitleLine {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.headerText {
+    max-width: 400px;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+}
+
+.cardFull {
+    grid-column: 1 / -1;
+    background-color: var(--color-primary);
+    height: 400px;
+}
+
+.cardContentDark {
+    padding: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardNumberDark {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    line-height: 1;
+}
+
+.badgeDark {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-pill);
+    letter-spacing: 1px;
+}
+
+.cardInfo {
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.cardTitleWhite {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.cardDescWhite {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.priceGold {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
+
+.emiWhite {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.iconBtnDark {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.iconBtnDark:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cardImageWrapper {
+    flex: 1;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Half Cards */
+.cardHalf {
+    flex-direction: column;
+    background-color: var(--color-card-bg);
+}
+
+.cardImageWrapperHalf {
+    height: 250px;
+    position: relative;
+}
+
+.cardImageHalf {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badgeLightFloat {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--color-card-bg);
+    color: var(--color-text-main);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-pill);
+    letter-spacing: 1px;
+}
+
+.cardContentLight {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardNumberLight {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--color-border);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.cardTitleDark {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.cardDescDark {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.cardFooterLight {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+}
+
+.priceDark {
+    color: var(--color-text-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
+
+.durationDark {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.iconBtnLight {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.iconBtnLight:hover {
+    background-color: var(--color-bg);
+}
+
+/* Full card vertical orientation */
+.cardFullVertical {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    background-color: var(--color-card-bg);
+}
+
+.cardImageWrapperWide {
+    height: 300px;
+    position: relative;
+}
+
+.cardImageWide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badgeDarkFloat {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-pill);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardFull {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .headerArea {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
