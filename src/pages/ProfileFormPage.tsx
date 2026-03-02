@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import styles from './ProfileFormPage.module.css';
 import { ChevronRight } from 'lucide-react';

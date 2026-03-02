@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './TestimonialsSection.module.css';
 import { Star, TrendingUp, TrendingDown, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 

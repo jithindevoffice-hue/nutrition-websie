@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './AboutSection.module.css';
 import { Award, CheckCircle2 } from 'lucide-react';
 

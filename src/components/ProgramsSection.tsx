@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ProgramsSection.module.css';
 import { ArrowUpRight } from 'lucide-react';
 

@@ -1,6 +1,5 @@
-import React from 'react';
 import styles from './HeroSection.module.css';
-import { ShieldCheck, TrendingUp, Sparkles } from 'lucide-react';
+import { ShieldCheck, TrendingUp } from 'lucide-react';
 
 export const HeroSection = () => {
     return (

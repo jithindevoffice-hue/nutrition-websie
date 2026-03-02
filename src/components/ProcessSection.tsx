@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ProcessSection.module.css';
 import { FileText, MessageSquare, CreditCard } from 'lucide-react';
 
