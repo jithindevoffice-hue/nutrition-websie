@@ -1,0 +1,189 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    padding: 4rem 0 8rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+}
+
+.progressContainer {
+    margin-bottom: 3rem;
+}
+
+.progressHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.stepText {
+    color: var(--color-text-muted);
+}
+
+.percentText {
+    color: var(--color-text-main);
+}
+
+.progressBarBg {
+    height: 6px;
+    background-color: var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progressBarFill {
+    height: 100%;
+    background-color: #6a9c7b;
+    /* Soft green success/progress color */
+    transition: width 0.3s ease;
+}
+
+.stepLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-border);
+    /* Inactive steps are faint */
+}
+
+.activeLabel {
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.formCard {
+    background-color: var(--color-bg);
+    /* Matches the beige background but with a border */
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 3rem;
+}
+
+.formTitle {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.formDesc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.inputGroup3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputWrapper label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+}
+
+.inputWrapper input,
+.inputWrapper select {
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-card-bg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-text-main);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.inputWrapper input:focus,
+.inputWrapper select:focus {
+    border-color: var(--color-primary);
+}
+
+.inputWrapper input::placeholder {
+    color: #a8a396;
+}
+
+.formFooter {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.continueBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #a8aead;
+    /* Muted greenish grey */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-pill);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.continueBtn:hover {
+    background-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+
+    .inputGroup2,
+    .inputGroup3 {
+        grid-template-columns: 1fr;
+    }
+}
