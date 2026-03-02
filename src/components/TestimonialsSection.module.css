@@ -1,0 +1,262 @@
+.testimonials {
+    background-color: var(--color-bg);
+    padding: 8rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.headerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+.subtitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.subtitleLine {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.navConfig {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.paginationText {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.navButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navBtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-main);
+    transition: all 0.2s;
+    background-color: transparent;
+}
+
+.navBtn:hover {
+    background-color: var(--color-card-bg);
+    border-color: var(--color-text-muted);
+}
+
+.carouselGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-md);
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tagPill {
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-pill);
+    letter-spacing: 1px;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.outcomeBar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-bg);
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    color: var(--color-text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.beforeAfter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.beforeBox,
+.afterBox {
+    flex: 1;
+    border-radius: var(--border-radius-sm);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.beforeBox {
+    background-color: #fff0f0;
+    /* Soft red */
+}
+
+.afterBox {
+    background-color: var(--color-success-bg);
+    /* Soft green */
+}
+
+.boxLabelBefore {
+    color: #d17575;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+}
+
+.boxLabelAfter {
+    color: #55b57d;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+}
+
+.boxValueBefore {
+    color: #c04242;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.boxValueAfter {
+    color: #3b9461;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.arrowBetween {
+    color: var(--color-border);
+    flex-shrink: 0;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0 0 2.5rem 0;
+    flex: 1;
+}
+
+.clientInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+}
+
+.clientAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.clientInfo strong {
+    display: block;
+    color: var(--color-text-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.clientInfo span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+}
+
+.carouselIndicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.indicatorEmpty {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+}
+
+.indicatorFull {
+    width: 32px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--color-accent);
+}
+
+@media (max-width: 1024px) {
+    .carouselGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .headerArea {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
