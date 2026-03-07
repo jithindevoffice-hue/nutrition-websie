@@ -177,11 +177,34 @@
         width: 100%;
         max-width: 320px;
     }
+
+    .credentialCard {
+        text-align: left;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .credentialsGrid {
+        justify-items: center;
+    }
 }
 
 @media (max-width: 768px) {
     .credentialsGrid {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .credentialCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .checkIcon {
+        margin-bottom: 0.75rem;
+        margin-top: 0;
     }
 
     .title {

@@ -121,19 +121,6 @@
     align-items: flex-end;
 }
 
-.priceGold {
-    color: var(--color-accent);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: var(--font-serif);
-}
-
-.emiWhite {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-}
-
 .iconBtnDark {
     width: 48px;
     height: 48px;
@@ -227,13 +214,6 @@
     padding-top: 1.5rem;
 }
 
-.priceDark {
-    color: var(--color-text-main);
-    font-size: 1.25rem;
-    font-weight: 700;
-    font-family: var(--font-serif);
-}
-
 .durationDark {
     color: var(--color-text-muted);
     font-size: 0.75rem;
@@ -299,8 +279,13 @@
 
     .headerArea {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         gap: 1.5rem;
+    }
+
+    .subtitleWrapper {
+        justify-content: center;
     }
 
     .cardContentDark,
@@ -312,6 +297,31 @@
 @media (max-width: 768px) {
     .card {
         flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardTop {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .badgeDark {
+        display: none;
+        /* Hide on mobile to declutter centered view */
+    }
+
+    .cardInfo {
+        margin-top: 0;
+    }
+
+    .cardFooter,
+    .cardFooterLight {
+        justify-content: center;
+        width: 100%;
+        border-top: none;
+        padding-top: 0;
     }
 
     .cardImageWrapper,
@@ -325,11 +335,13 @@
 
     .iconBtnDark,
     .iconBtnLight {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
     }
 
+    .cardNumberLight,
     .cardNumberDark {
         font-size: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 }
