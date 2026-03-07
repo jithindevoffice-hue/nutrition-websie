@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background-color: var(--color-bg);
 }
 
@@ -16,6 +16,8 @@
     padding: 0.75rem 1rem 0.75rem 1.5rem;
     border-radius: var(--border-radius-pill);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    position: relative;
+    z-index: 101;
 }
 
 .logo {
@@ -40,12 +42,19 @@
     font-weight: 600;
     font-size: 1.25rem;
     color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.navLinksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
 }
 
 .navLinks {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
@@ -56,6 +65,7 @@
     letter-spacing: 1px;
     color: var(--color-text-muted);
     transition: color 0.2s;
+    white-space: nowrap;
 }
 
 .navLink:hover {
@@ -79,6 +89,7 @@
     font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .statusDot {
@@ -86,4 +97,66 @@
     height: 6px;
     background-color: var(--color-accent);
     border-radius: 50%;
+}
+
+.mobileToggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    z-index: 102;
+}
+
+@media (max-width: 1024px) {
+    .navLinks {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .mobileToggle {
+        display: flex;
+    }
+
+    .navLinksWrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 100;
+        padding: 2rem;
+    }
+
+    .mobileOpen {
+        transform: translateY(0);
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navLink {
+        font-size: 1.25rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .statusBadge {
+        width: 100%;
+        justify-content: center;
+    }
 }

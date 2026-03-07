@@ -149,12 +149,10 @@
 
 .beforeBox {
     background-color: #fff0f0;
-    /* Soft red */
 }
 
 .afterBox {
     background-color: var(--color-success-bg);
-    /* Soft green */
 }
 
 .boxLabelBefore {
@@ -257,6 +255,45 @@
     .headerArea {
         flex-direction: column;
         align-items: flex-start;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+
+    .beforeAfter {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .arrowBetween {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+
+    .beforeBox,
+    .afterBox {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .navConfig {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .testimonials {
+        padding: 4rem 0;
     }
 }

@@ -154,10 +154,41 @@
     .container {
         grid-template-columns: 1fr;
         gap: 4rem;
+        text-align: center;
+    }
+
+    .subtitleWrapper {
+        justify-content: center;
+    }
+
+    .imageWrapper {
+        padding: 1.5rem 1.5rem 0 0;
+    }
+
+    .image {
+        transform: translate(-0.75rem, 0.75rem);
+        height: 400px;
     }
 
     .badge {
-        right: 50%;
-        transform: translateX(50%);
+        position: static;
+        margin: 2rem auto 0;
+        transform: none !important;
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .credentialsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .image {
+        height: 300px;
     }
 }
