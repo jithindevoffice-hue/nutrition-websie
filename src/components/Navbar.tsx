@@ -18,7 +18,7 @@ export const Navbar = () => {
 
                 <div className={`${styles.navLinksWrapper} ${isMenuOpen ? styles.mobileOpen : ''}`}>
                     <ul className={styles.navLinks}>
-                        <li><NavLink to="/" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>ABOUT</NavLink></li>
+                        <li><NavLink to="/about" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>ABOUT</NavLink></li>
                         <li><NavLink to="/" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>PROGRAMS</NavLink></li>
                         <li><NavLink to="/" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>PROCESS</NavLink></li>
                         <li><NavLink to="/" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>STORIES</NavLink></li>
