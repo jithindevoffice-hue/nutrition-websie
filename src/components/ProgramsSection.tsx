@@ -42,10 +42,6 @@ export const ProgramsSection = () => {
                             </div>
 
                             <div className={styles.cardFooter}>
-                                <div>
-                                    <div className={styles.priceGold}>₹18,000</div>
-                                    <div className={styles.emiWhite}>or 3 EMIs of ₹6,200</div>
-                                </div>
                                 <button className={styles.iconBtnDark}>
                                     <ArrowUpRight size={20} color="white" />
                                 </button>
@@ -69,7 +65,6 @@ export const ProgramsSection = () => {
 
                             <div className={styles.cardFooterLight}>
                                 <div>
-                                    <div className={styles.priceDark}>₹14,000</div>
                                     <div className={styles.durationDark}>8 Weeks</div>
                                 </div>
                                 <button className={styles.iconBtnLight}>
@@ -92,7 +87,6 @@ export const ProgramsSection = () => {
 
                             <div className={styles.cardFooterLight}>
                                 <div>
-                                    <div className={styles.priceDark}>₹22,000</div>
                                     <div className={styles.durationDark}>16 Weeks</div>
                                 </div>
                                 <button className={styles.iconBtnLight}>
@@ -114,7 +108,6 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Take back control of your blood sugar</p>
 
                             <div className={styles.cardFooterLight}>
-                                <div className={styles.priceDark}>₹26,000</div>
                                 <button className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </button>

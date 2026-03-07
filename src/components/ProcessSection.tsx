@@ -63,7 +63,7 @@ export const ProcessSection = () => {
 
                         <div className={styles.cardFooter}>
                             <span className={styles.tagDot}></span>
-                            45-min video call · Free
+                            45-min video call
                         </div>
                     </div>
 
@@ -78,12 +78,12 @@ export const ProcessSection = () => {
 
                         <h3 className={styles.cardTitle}>Enroll & Begin Your Journey</h3>
                         <p className={styles.cardDescription}>
-                            Once you've chosen your program, complete secure payment to enroll. You'll receive your personalized onboarding kit, meal framework, and first weekly check-in within 24 hours.
+                            Once you've chosen your program, you'll receive your personalized onboarding kit, meal framework, and first weekly check-in within 24 hours.
                         </p>
 
                         <div className={styles.cardFooter}>
                             <span className={styles.tagDot}></span>
-                            Secure payment · Starts in 24hrs
+                            Starts in 24hrs
                         </div>
                     </div>
 
