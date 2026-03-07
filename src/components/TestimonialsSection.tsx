@@ -59,7 +59,7 @@ export const TestimonialsSection = () => {
                         </div>
 
                         <blockquote className={styles.quote}>
-                            "I had been bloated every single day for 6 years. Three gastroenterologists, dozens of tests — and nothing helped. Priya's gut protocol changed everything. By week 4, I had my first bloat-free week in years. By week 8, my IBS was completely under control."
+                            "I had been bloated every single day for 6 years. Three gastroenterologists, dozens of tests — and nothing helped. Sonika's gut protocol changed everything. By week 4, I had my first bloat-free week in years. By week 8, my IBS was completely under control."
                         </blockquote>
 
                         <div className={styles.clientInfo}>
@@ -98,7 +98,7 @@ export const TestimonialsSection = () => {
                         </div>
 
                         <blockquote className={styles.quote}>
-                            "I came to Priya for weight loss but got so much more. My pre-diabetes reversed, my sleep apnea improved, and my cholesterol normalized — all in 14 weeks. This wasn't a weight loss program, it was a life transformation."
+                            "I came to Sonika for weight loss but got so much more. My pre-diabetes reversed, my sleep apnea improved, and my cholesterol normalized — all in 14 weeks. This wasn't a weight loss program, it was a life transformation."
                         </blockquote>
 
                         <div className={styles.clientInfo}>

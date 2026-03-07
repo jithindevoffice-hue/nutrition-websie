@@ -7,7 +7,7 @@ export const AboutSection = () => {
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
-                        <img src="/hero-image.png" alt="Priya Sharma" className={styles.image} />
+                        <img src="/hero-image.png" alt="Sonika" className={styles.image} />
                         <div className={styles.badge}>
                             <div className={styles.badgeIcon}>
                                 <Award size={20} color="#b59c73" />
@@ -27,7 +27,7 @@ export const AboutSection = () => {
                     </div>
 
                     <h2 className={styles.title}>
-                        Hi, I'm Priya Sharma — <br />
+                        Hi, I'm Sonika — <br />
                         <span className="text-italic">your guide to lasting wellness.</span>
                     </h2>
 

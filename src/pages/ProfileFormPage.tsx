@@ -18,7 +18,7 @@ export const ProfileFormPage = () => {
                     <div className={styles.header}>
                         <h1 className={styles.title}>Your Wellness Profile</h1>
                         <p className={styles.description}>
-                            This confidential form helps Priya understand your health history and goals before your free discovery call. Takes about 10–15 minutes.
+                            This confidential form helps Sonika understand your health history and goals before your free discovery call. Takes about 10–15 minutes.
                         </p>
                     </div>
 

@@ -26,7 +26,7 @@ export const Footer = () => {
                     <div className={styles.linksColumn}>
                         <h4>Navigate</h4>
                         <ul>
-                            <li><a href="#">About Priya</a></li>
+                            <li><a href="#">About Sonika</a></li>
                             <li><a href="#">Signature Programs</a></li>
                             <li><a href="#">How it Works</a></li>
                             <li><a href="#">Client Stories</a></li>

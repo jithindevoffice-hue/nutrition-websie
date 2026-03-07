@@ -52,7 +52,7 @@ export const ProgramsSection = () => {
                             </div>
                         </div>
                         <div className={styles.cardImageWrapper}>
-                            <img src="/hero-image.png" alt="Weight Loss Food" className={styles.cardImage} />
+                            <img src="/weight-loss.png" alt="Metabolic Weight Loss" className={styles.cardImage} />
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@ export const ProgramsSection = () => {
                     <div className={`${styles.card} ${styles.cardHalf}`}>
                         <div className={styles.cardImageWrapperHalf}>
                             <span className={styles.badgeLightFloat}>GUT RESET</span>
-                            <img src="/hero-image.png" alt="Gut Health Foods" className={styles.cardImageHalf} />
+                            <img src="/gut-health.png" alt="Gut Health Foods" className={styles.cardImageHalf} />
                         </div>
                         <div className={styles.cardContentLight}>
                             <span className={styles.cardNumberLight}>02</span>
@@ -83,7 +83,7 @@ export const ProgramsSection = () => {
                     <div className={`${styles.card} ${styles.cardHalf}`}>
                         <div className={styles.cardImageWrapperHalf}>
                             <span className={styles.badgeLightFloat}>HORMONAL BALANCE</span>
-                            <img src="/hero-image.png" alt="Meditation" className={styles.cardImageHalf} />
+                            <img src="/thyroid.png" alt="Thyroid Reversal" className={styles.cardImageHalf} />
                         </div>
                         <div className={styles.cardContentLight}>
                             <span className={styles.cardNumberLight}>03</span>
@@ -106,7 +106,7 @@ export const ProgramsSection = () => {
                     <div className={`${styles.card} ${styles.cardFullVertical}`}>
                         <div className={styles.cardImageWrapperWide}>
                             <span className={styles.badgeDarkFloat}>BLOOD SUGAR</span>
-                            <img src="/hero-image.png" alt="Healthy Nuts and Greens" className={styles.cardImageWide} />
+                            <img src="/diabetes.png" alt="Diabetes Reversal" className={styles.cardImageWide} />
                         </div>
                         <div className={styles.cardContentLight}>
                             <span className={styles.cardNumberLight}>04</span>

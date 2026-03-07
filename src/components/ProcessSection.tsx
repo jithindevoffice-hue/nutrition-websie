@@ -58,7 +58,7 @@ export const ProcessSection = () => {
 
                         <h3 className={styles.cardTitle}>Initial Discovery Consultation</h3>
                         <p className={styles.cardDescription}>
-                            A 45-minute video call with Priya to review your profile, understand your health story, and determine which program is the right fit. This is your space to ask anything.
+                            A 45-minute video call with Sonika to review your profile, understand your health story, and determine which program is the right fit. This is your space to ask anything.
                         </p>
 
                         <div className={styles.cardFooter}>
