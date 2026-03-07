@@ -1,0 +1,281 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+}
+
+.heroImageWrapper {
+    width: 100%;
+    padding: 1rem 1rem 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heroImage {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    max-height: 800px;
+}
+
+@media (min-width: 768px) {
+    .heroImage {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.heroContent {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.heroTitle {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heroAccentLine {
+    width: 3rem;
+    height: 0.25rem;
+    background-color: var(--color-accent);
+    margin: 0 auto;
+    border-radius: 9999px;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 2rem 1rem;
+    background-color: var(--color-bg);
+}
+
+.philosophyContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.philosophySubtitle {
+    color: rgba(43, 74, 61, 0.6);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.philosophyCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .philosophyCards {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .philosophyCards>* {
+        flex: 1;
+    }
+}
+
+.philosophyCard {
+    background-color: var(--color-card-bg);
+    padding: 1.5rem;
+    border-radius: 20px;
+    border-left: 4px solid var(--color-accent);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.cardIcon {
+    color: var(--color-accent);
+}
+
+.cardTitle {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: var(--font-sans);
+}
+
+.cardText {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.625;
+}
+
+/* Story Section */
+.story {
+    padding: 4rem 1.5rem;
+    background-color: rgba(43, 74, 61, 0.05);
+}
+
+.storyContainer {
+    max-width: 28rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .storyContainer {
+        max-width: 48rem;
+    }
+}
+
+.storyTitle {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+}
+
+.storyQuote {
+    font-style: italic;
+    font-family: var(--font-serif);
+    color: rgba(43, 74, 61, 0.8);
+    font-size: 1.25rem;
+    line-height: 1.625;
+    margin-bottom: 2rem;
+}
+
+.storyTextContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .storyTextContent {
+        text-align: center;
+    }
+}
+
+.coachProfile {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coachImageWrapper {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 2px solid var(--color-accent);
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coachImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9999px;
+}
+
+.coachName {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.coachTitle {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* CTA Section */
+.cta {
+    padding: 5rem 1rem;
+    background-color: var(--color-bg);
+}
+
+.ctaContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ctaCard {
+    background-color: var(--color-card-bg);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(43, 74, 61, 0.05);
+    text-align: center;
+}
+
+.ctaTitle {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+.ctaText {
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButton {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.2s;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ctaButton:hover {
+    opacity: 0.9;
+}
