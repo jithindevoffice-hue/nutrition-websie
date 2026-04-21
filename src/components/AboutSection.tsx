@@ -1,5 +1,6 @@
 import styles from './AboutSection.module.css';
 import { Award, CheckCircle2 } from 'lucide-react';
+import sonikaImg from '../assets/sonika.jpg';
 
 export const AboutSection = () => {
     return (
@@ -7,7 +8,7 @@ export const AboutSection = () => {
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
-                        <img src="/hero-image.png" alt="Sonika" className={styles.image} />
+                        <img src={sonikaImg} alt="Sonika" className={styles.image} />
                         <div className={styles.badge}>
                             <div className={styles.badgeIcon}>
                                 <Award size={20} color="#b59c73" />

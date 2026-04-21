@@ -88,12 +88,12 @@ export const AboutPage = () => {
                         <div className={styles.coachProfile}>
                             <div className={styles.coachImageWrapper}>
                                 <img
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh--tTwkasy_K6hR3Kvmp5WR46PofJ7TIyB3OK2ZN8APyS7Knw9sGPyMvKv4mALg4pzMMuygQwGguHTVrGdXhiwC9lJ2hCkMwtvROKQa7bugfGVUIiFI3gCEDgkAfoAsRbDSMWKmFIdQp1aUWN-Qjt9HpziBr8fIg6iMRu40m82FgrEOwIVGKKPbRi8KM4SnOawtBv1rwj-fX1bEQlfomFrSeDQ4zC7WwZiII7lEIjEwv8wgpO5lBG6v0L96STQSS4yqK7yZmsHOWA"
-                                    alt="Close up portrait of a professional female wellness coach smiling"
+                                    src="/sonika.jpg"
+                                    alt="Close up portrait of Sonika, professional wellness coach smiling"
                                     className={styles.coachImage}
                                 />
                             </div>
-                            <p className={styles.coachName}>Elena Thorne</p>
+                            <p className={styles.coachName}>Sonika</p>
                             <p className={styles.coachTitle}>Founder & Lead Coach</p>
                         </div>
                     </div>
