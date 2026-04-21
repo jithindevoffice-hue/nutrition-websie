@@ -1,9 +1,7 @@
 import styles from './ProgramsSection.module.css';
 import { ArrowUpRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 export const ProgramsSection = () => {
-    const navigate = useNavigate();
     return (
         <section className={`section ${styles.programs}`}>
             <div className={styles.container}>
@@ -44,7 +42,7 @@ export const ProgramsSection = () => {
                             </div>
 
                             <div className={styles.cardFooter}>
-                                <button className={styles.iconBtnDark} onClick={() => navigate('/profile')}>
+                                <button className={styles.iconBtnDark}>
                                     <ArrowUpRight size={20} color="white" />
                                 </button>
                             </div>
@@ -69,7 +67,7 @@ export const ProgramsSection = () => {
                                 <div>
                                     <div className={styles.durationDark}>8 Weeks</div>
                                 </div>
-                                <button className={styles.iconBtnLight} onClick={() => navigate('/profile')}>
+                                <button className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </button>
                             </div>
@@ -91,7 +89,7 @@ export const ProgramsSection = () => {
                                 <div>
                                     <div className={styles.durationDark}>16 Weeks</div>
                                 </div>
-                                <button className={styles.iconBtnLight} onClick={() => navigate('/profile')}>
+                                <button className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </button>
                             </div>
@@ -110,7 +108,7 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Take back control of your blood sugar</p>
 
                             <div className={styles.cardFooterLight}>
-                                <button className={styles.iconBtnLight} onClick={() => navigate('/profile')}>
+                                <button className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </button>
                             </div>
