@@ -28,17 +28,17 @@ export const AboutSection = () => {
                     </div>
 
                     <h2 className={styles.title}>
-                        Hi, I'm Sonika — <br />
-                        <span className="text-italic">your guide to lasting wellness.</span>
+                        Hi, I'm Sonika Babu. <br />
+                        <span className="text-italic">Your partner to true balance.</span>
                     </h2>
 
                     <div className={styles.description}>
                         <p>
-                            For over 12 years, I've helped 500+ women and men reverse chronic conditions that conventional medicine often dismisses as "just manage it." My approach combines functional nutrition, gut microbiome science, and lifestyle medicine — addressing the root cause, not the symptom.
+                            For more than 20 years, I’ve been a partner to people just like you—helping them shed what holds them back to discover a life of true balance and confidence.
                         </p>
                         <br />
                         <p>
-                            Whether you've been told your thyroid numbers are "borderline," struggled with unexplained weight gain, or lived with bloating and fatigue for years — there is a path forward. I've walked it with hundreds of clients, and I'll walk it with you.
+                            As a Certified Wellness Coach and Functional Medicine expert, I believe that health isn't "one size fits all." Whether you're looking to manage stress, gain strength, or finally get the sleep you need, I’m here to empower you with a plan designed for your specific life. You have the power to feel your best—I'm just here to help you unlock it.
                         </p>
                     </div>
 

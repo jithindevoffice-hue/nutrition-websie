@@ -3,6 +3,7 @@ import { Footer } from '../components/Footer';
 import { Utensils, Flower2, Brain } from 'lucide-react';
 import styles from './AboutPage.module.css';
 import { Link } from 'react-router-dom';
+import sonikaImg from '../assets/sonika.jpg';
 
 export const AboutPage = () => {
     return (
@@ -88,7 +89,7 @@ export const AboutPage = () => {
                         <div className={styles.coachProfile}>
                             <div className={styles.coachImageWrapper}>
                                 <img
-                                    src="/sonika.jpg"
+                                    src={sonikaImg}
                                     alt="Close up portrait of Sonika, professional wellness coach smiling"
                                     className={styles.coachImage}
                                 />
