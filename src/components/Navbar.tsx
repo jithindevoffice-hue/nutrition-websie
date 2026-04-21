@@ -25,7 +25,7 @@ export const Navbar = () => {
                     </ul>
 
                     <div className={styles.actions}>
-                        <Link to="/profile" className="btn btn-primary" onClick={() => setIsMenuOpen(false)}>BEGIN</Link>
+                        <button className="btn btn-primary">BEGIN</button>
                     </div>
                 </div>
 
