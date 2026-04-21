@@ -25,7 +25,7 @@ export const Navbar = () => {
                     </ul>
 
                     <div className={styles.actions}>
-                        <button className="btn btn-primary">BEGIN</button>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCHMxNLZeuxf6f0pcRhrda9p-7Pvxs1yWZ62fLYTc6pwWIBQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn btn-primary">BEGIN</a>
                     </div>
                 </div>
 
