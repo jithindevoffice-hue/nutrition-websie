@@ -1,5 +1,6 @@
 import styles from './HeroSection.module.css';
 import { ShieldCheck, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const HeroSection = () => {
     return (
@@ -21,7 +22,7 @@ export const HeroSection = () => {
 
                     <div className={styles.buttonGroup}>
                         <button className="btn btn-accent">Begin Your Wellness Journey</button>
-                        <button className="btn btn-outline">Explore Programs</button>
+                        <Link to="/programs" className="btn btn-outline">Explore Programs</Link>
                     </div>
 
                     <div className={styles.statsRow}>

@@ -1,0 +1,283 @@
+.page {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+}
+
+.hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.subtitleLine {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+}
+
+.cardFull {
+    grid-column: 1 / -1;
+    background-color: var(--color-primary);
+    min-height: 500px;
+}
+
+.cardFullReverse {
+    grid-column: 1 / -1;
+    background-color: var(--color-card-bg);
+    min-height: 500px;
+    flex-direction: row-reverse;
+}
+
+.cardContentDark {
+    padding: 4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContentLight {
+    padding: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-card-bg);
+}
+
+.cardNumberDark {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.cardNumberLight {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: var(--color-border);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.cardTitleWhite {
+    font-size: 2.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.cardTitleDark {
+    font-size: 1.75rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+
+.cardSubtitleWhite {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.cardSubtitleDark {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.cardDescWhite {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cardDescDark {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.listWhite {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.listDark {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.listWhite li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.listDark li {
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.listWhite li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.listDark li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.quoteWhite {
+    margin-top: auto;
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: white;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.quoteDark {
+    margin-top: auto;
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+.cardImageWrapper {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Half Cards */
+.cardHalf {
+    flex-direction: column;
+}
+
+.cardImageWrapperHalf {
+    height: 300px;
+    position: relative;
+}
+
+/* CTA */
+.cta {
+    background-color: var(--color-card-bg);
+    padding: 6rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+}
+
+.ctaQuote {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--color-primary);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.2;
+}
+
+.ctaAuthor {
+    color: var(--color-text-muted);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardFull, .cardFullReverse {
+        flex-direction: column;
+    }
+
+    .cardContentDark, .cardContentLight {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1.5rem 3rem;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .cardImageWrapper, .cardImageWrapperHalf {
+        height: 250px;
+        flex: none;
+    }
+    
+    .ctaQuote {
+         font-size: 2rem;
+    }
+}

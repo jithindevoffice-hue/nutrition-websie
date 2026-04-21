@@ -4,6 +4,7 @@ import { Utensils, Flower2, Brain } from 'lucide-react';
 import styles from './AboutPage.module.css';
 import { Link } from 'react-router-dom';
 import sonikaImg from '../assets/sonika.jpg';
+import aboutHeroImg from '../assets/about-hero.jpg';
 
 export const AboutPage = () => {
     return (
@@ -17,8 +18,8 @@ export const AboutPage = () => {
                         <div
                             className={styles.heroImage}
                             role="img"
-                            aria-label="A high-end lifestyle image of a person practicing yoga in a bright studio"
-                            style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuByj2CZ5TTYaD3oEx0fxWEAgdbLgdnv0uzaL2wdJbUcoYErDFiw_1U9P2n1wVySwd90d6RIhmI2jVpZnrOnPUEl2fBdKbb2Y8lLZQoXdLA1ECOKDnp3Sz4KNBQo0SvGLLryYuIjODBUIKWF8uUagZryx0b5VenpNEzx4Bkg1B8okWl5gVtpOOcqjLAigfpFyVFSiHo6YexejRiAzr36ZKU353IJTXZH467zxrPbI6_xfhg7HXlR-PnaQsFaODAUJPzdYGlQN9VWy766')` }}
+                            aria-label="A woman sitting from behind in an outdoor setting"
+                            style={{ backgroundImage: `url(${aboutHeroImg})` }}
                         />
                     </div>
                     <div className={styles.heroContent}>
