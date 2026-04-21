@@ -4,6 +4,7 @@ import { ProfileFormPage } from './pages/ProfileFormPage'
 import { AboutPage } from './pages/AboutPage'
 
 import { ProgramsPage } from './pages/ProgramsPage'
+import { ProcessPage } from './pages/ProcessPage'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/programs" element={<ProgramsPage />} />
+      <Route path="/process" element={<ProcessPage />} />
       <Route path="/profile" element={<ProfileFormPage />} />
     </Routes>
   )

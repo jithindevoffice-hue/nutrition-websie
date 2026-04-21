@@ -3,7 +3,7 @@ import { FileText, MessageSquare, CreditCard } from 'lucide-react';
 
 export const ProcessSection = () => {
     return (
-        <section className={`section ${styles.process}`}>
+        <section id="process" className={`section ${styles.process}`}>
             <div className={styles.container}>
 
                 {/* Header Area */}
