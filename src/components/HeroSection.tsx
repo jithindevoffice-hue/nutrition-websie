@@ -21,7 +21,7 @@ export const HeroSection = () => {
                     </p>
 
                     <div className={styles.buttonGroup}>
-                        <button className="btn btn-accent">Begin Your Wellness Journey</button>
+                        <Link to="/profile" className="btn btn-accent">Begin Your Wellness Journey</Link>
                         <Link to="/programs" className="btn btn-outline">Explore Programs</Link>
                     </div>
 
