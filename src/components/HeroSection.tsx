@@ -56,7 +56,7 @@ export const HeroSection = () => {
                             </div>
                         </div>
 
-                        <div className={`${styles.floatingBadge} ${styles.badgeTopRight}`}>
+                        <div className={`${styles.floatingBadge} ${styles.badgeBottomRight}`}>
                             <div>
                                 <span className={styles.slotsDot}></span>
                                 <span className={styles.slotsText}>LIMITED SLOTS</span>
