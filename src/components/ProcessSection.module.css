@@ -91,35 +91,24 @@
     position: relative;
 }
 
-/* Connective line behind step numbers */
-.cardHeader::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 3rem;
-    right: -2.5rem;
-    /* Extends to edge of card */
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.08);
-    z-index: 0;
-}
-
-/* Remove line for last card to prevent it from going off edge */
-.card:last-child .cardHeader::after {
-    display: none;
-}
+/* Lines removed per user request */
 
 .iconCircle {
     width: 56px;
     height: 56px;
     border-radius: 16px;
     background-color: rgba(181, 156, 115, 0.15);
-    /* Accent color with low opacity */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
     position: relative;
+    animation: bounceIcon 3s infinite ease-in-out;
+}
+
+@keyframes bounceIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
 .stepNumber {
