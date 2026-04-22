@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import { Leaf, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,10 +10,10 @@ export const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <Link to="/" className={styles.logo}>
-                    <div className={styles.logoIcon}>
-                        <Leaf size={20} color="#b59c73" />
+                    <div className={styles.logoIcon} style={{ background: 'transparent' }}>
+                        <img src="/lotus-logo.png" alt="Lotus" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                     </div>
-                    <span className={styles.logoText}>WellnessCoach</span>
+                    <span className={styles.logoText}>Sonica Holistic Health</span>
                 </Link>
 
                 <div className={`${styles.navLinksWrapper} ${isMenuOpen ? styles.mobileOpen : ''}`}>

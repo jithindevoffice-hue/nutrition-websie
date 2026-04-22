@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import { Leaf, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Facebook, Youtube } from 'lucide-react';
 
 export const Footer = () => {
     return (
@@ -8,10 +8,10 @@ export const Footer = () => {
                 <div className={styles.topSection}>
                     <div className={styles.brand}>
                         <div className={styles.logo}>
-                            <div className={styles.logoIcon}>
-                                <Leaf size={24} color="#b59c73" />
+                            <div className={styles.logoIcon} style={{ background: 'transparent' }}>
+                                <img src="/lotus-logo.png" alt="Lotus" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                             </div>
-                            <span className={styles.logoText}>WellnessCoach</span>
+                            <span className={styles.logoText}>Sonica Holistic Health</span>
                         </div>
                         <p className={styles.brandDesc}>
                             Root-cause nutrition protocols for lasting vitality and health.
