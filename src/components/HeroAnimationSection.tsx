@@ -4,11 +4,22 @@ import styles from './HeroAnimationSection.module.css';
 export const HeroAnimationSection = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [isStarted, setIsStarted] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const frameCount = 255;
     const imagesRef = useRef<HTMLImageElement[]>(new Array(frameCount));
 
     useEffect(() => {
+        if (isMobile) return;
         let loadedCount = 0;
         let currentIndex = 1;
         const maxConcurrent = 6; // strictly limit concurrent requests to avoid browser network choking!
@@ -111,6 +122,8 @@ export const HeroAnimationSection = () => {
             cancelAnimationFrame(animationFrameId);
         };
     }, [isStarted]);
+
+    if (isMobile) return null;
 
     return (
         <section className={styles.animationSection}>
