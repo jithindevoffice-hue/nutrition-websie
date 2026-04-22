@@ -1,5 +1,6 @@
 import styles from './Footer.module.css';
 import { Instagram, Facebook, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -45,7 +46,7 @@ export const Footer = () => {
                     <div className={styles.ctaColumn}>
                         <h4>Ready to transform?</h4>
                         <p>Join the waitlist for our next intake or book a discovery call today.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCHMxNLZeuxf6f0pcRhrda9p-7Pvxs1yWZ62fLYTc6pwWIBQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>Begin Journey</a>
+                        <Link to="/apply" className="btn btn-primary" style={{ marginTop: '1rem' }}>Begin Journey</Link>
                     </div>
                 </div>
 

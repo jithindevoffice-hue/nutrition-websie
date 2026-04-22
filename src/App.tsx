@@ -5,6 +5,7 @@ import { AboutPage } from './pages/AboutPage'
 
 import { ProgramsPage } from './pages/ProgramsPage'
 import { ProcessPage } from './pages/ProcessPage'
+import { ApplyPage } from './pages/ApplyPage'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/programs" element={<ProgramsPage />} />
       <Route path="/process" element={<ProcessPage />} />
+      <Route path="/apply" element={<ApplyPage />} />
       <Route path="/profile" element={<ProfileFormPage />} />
     </Routes>
   )
