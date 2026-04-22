@@ -5,44 +5,60 @@ export const HeroAnimationSection = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [isStarted, setIsStarted] = useState(false);
     
-    // Updated to reflect the new 255 frames in the folder
     const frameCount = 255;
-    const imagesRef = useRef<HTMLImageElement[]>([]);
+    const imagesRef = useRef<HTMLImageElement[]>(new Array(frameCount));
 
     useEffect(() => {
         let loadedCount = 0;
-        const tempImages: HTMLImageElement[] = [];
+        let currentIndex = 1;
+        const maxConcurrent = 6; // strictly limit concurrent requests to avoid browser network choking!
+        let activeRequests = 0;
 
-        for (let i = 1; i <= frameCount; i++) {
-            const img = new Image();
-            const num = String(i).padStart(3, '0');
-            
-            img.onload = () => {
-                loadedCount++;
+        // Function to smartly load images iteratively without flooding the cache
+        const loadNextBatch = () => {
+            while (activeRequests < maxConcurrent && currentIndex <= frameCount) {
+                const i = currentIndex;
+                currentIndex++;
+                activeRequests++;
+
+                const img = new Image();
+                const num = String(i).padStart(3, '0');
                 
-                // Start the animation as soon as the first tightly clustered buffer (10 frames) are ready.
-                // This eliminates the long load time drastically!
-                if (!isStarted && loadedCount > 10) {
-                    setIsStarted(true);
-                }
-            };
+                img.onload = () => {
+                    imagesRef.current[i - 1] = img;
+                    loadedCount++;
+                    activeRequests--;
+                    
+                    // As soon as the first 30 frames are sequentially loaded (1 full second of video), 
+                    // we smoothly start playing it. 
+                    if (!isStarted && loadedCount > 30) {
+                        setIsStarted(true);
+                    }
 
-            img.onerror = () => {
-                loadedCount++;
-            };
+                    // Kick off the next image in the queue seamlessly
+                    loadNextBatch();
+                };
 
-            img.src = `/images/herosection/ezgif-frame-${num}.png`;
-            tempImages.push(img);
-        }
-        imagesRef.current = tempImages;
+                img.onerror = () => {
+                    activeRequests--;
+                    loadedCount++;
+                    loadNextBatch();
+                };
 
-        // Fallback catch to start playing if the cache is incredibly fast
-        setTimeout(() => setIsStarted(true), 2000); 
+                img.src = `/images/herosection/ezgif-frame-${num}.png`;
+            }
+        };
 
-    }, []);
+        // Initialize the first smart-batch of downloads
+        loadNextBatch();
+
+        // Extra fallback
+        setTimeout(() => setIsStarted(true), 3000);
+
+    }, [isStarted]);
 
     useEffect(() => {
-        if (!isStarted || !canvasRef.current || imagesRef.current.length === 0) return;
+        if (!isStarted || !canvasRef.current) return;
         
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d', { alpha: false }); 
@@ -53,16 +69,18 @@ export const HeroAnimationSection = () => {
         let lastTimestamp = 0;
 
         const render = (timestamp: number) => {
-            // ~30 FPS lock
-            if (timestamp - lastTimestamp >= 33) {
+            if (timestamp - lastTimestamp >= 33) { // 30 FPS Lock
                 const img = imagesRef.current[frameIndex];
 
-                // If the next frame is ready, draw it and advance index.
-                // If it's NOT ready yet (still downloading), we gracefully freeze on the current frame 
-                // just like a buffering Youtube video, rather than glitching!
+                // Check if the current frame successfully exists and is fully loaded.
+                // If it's hitting a bottleneck, it briefly pauses (like normal video streaming)
+                // without skipping frames or throwing an error!
                 if (img && img.complete && img.naturalWidth > 0) {
-                    // Set canvas bounds safely
-                    if (frameIndex === 0) {
+                    if (frameIndex === 0 && canvas.width === 300) { 
+                        // Set true dynamic dimension from first loaded frame exactly once
+                        canvas.width = img.naturalWidth;
+                        canvas.height = img.naturalHeight;
+                    } else if (canvas.width !== img.naturalWidth && img.naturalWidth > 0) {
                         canvas.width = img.naturalWidth;
                         canvas.height = img.naturalHeight;
                     }
