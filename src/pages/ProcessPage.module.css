@@ -107,12 +107,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: bounceIcon 3s infinite ease-in-out;
-}
-
-@keyframes bounceIcon {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
 }
 
 .stepNumber {

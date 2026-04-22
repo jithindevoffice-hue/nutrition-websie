@@ -103,12 +103,6 @@
     justify-content: center;
     z-index: 1;
     position: relative;
-    animation: bounceIcon 3s infinite ease-in-out;
-}
-
-@keyframes bounceIcon {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
 }
 
 .stepNumber {
