@@ -1,0 +1,54 @@
+.animationSection {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* Since it's acting as the topmost header, give it top padding to clear standard absolute navbars if needed, though 100vh is usually fine */
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.loaderWrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    z-index: 10;
+}
+
+.loader {
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progressBar {
+    width: 200px;
+    height: 2px;
+    background-color: var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: var(--color-accent);
+    transition: width 0.1s linear;
+}
