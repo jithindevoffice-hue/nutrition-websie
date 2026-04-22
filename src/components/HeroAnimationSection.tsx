@@ -67,17 +67,14 @@ export const HeroAnimationSection = () => {
         let frameIndex = 0;
         let animationFrameId: number;
         let lastTimestamp = 0;
+        let loopCount = 0;
 
         const render = (timestamp: number) => {
             if (timestamp - lastTimestamp >= 33) { // 30 FPS Lock
                 const img = imagesRef.current[frameIndex];
 
-                // Check if the current frame successfully exists and is fully loaded.
-                // If it's hitting a bottleneck, it briefly pauses (like normal video streaming)
-                // without skipping frames or throwing an error!
                 if (img && img.complete && img.naturalWidth > 0) {
                     if (frameIndex === 0 && canvas.width === 300) { 
-                        // Set true dynamic dimension from first loaded frame exactly once
                         canvas.width = img.naturalWidth;
                         canvas.height = img.naturalHeight;
                     } else if (canvas.width !== img.naturalWidth && img.naturalWidth > 0) {
@@ -86,7 +83,22 @@ export const HeroAnimationSection = () => {
                     }
                     
                     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    frameIndex = (frameIndex + 1) % frameCount;
+                    
+                    const nextIndex = (frameIndex + 1) % frameCount;
+                    
+                    // Detect when the sequence completely wraps around back to 0
+                    if (nextIndex === 0) {
+                        loopCount++;
+                        // Auto-scroll natively to the second section after exactly 2 loops
+                        if (loopCount === 2) {
+                            window.scrollTo({
+                                top: window.innerHeight,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                    
+                    frameIndex = nextIndex;
                 }
                 lastTimestamp = timestamp;
             }
