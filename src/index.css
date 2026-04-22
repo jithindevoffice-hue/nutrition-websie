@@ -78,7 +78,6 @@ button {
   background: none;
 }
 
-/* Base button styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -87,10 +86,18 @@ button {
   border-radius: var(--border-radius-pill);
   font-weight: 500;
   font-size: 0.875rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn-primary {
@@ -100,6 +107,7 @@ button {
 
 .btn-primary:hover {
   background-color: #1f362c;
+  box-shadow: 0 6px 16px rgba(43, 74, 61, 0.25);
 }
 
 .btn-accent {
@@ -109,6 +117,7 @@ button {
 
 .btn-accent:hover {
   background-color: #9c8562;
+  box-shadow: 0 6px 16px rgba(181, 156, 115, 0.3);
 }
 
 .btn-outline {
@@ -118,7 +127,9 @@ button {
 }
 
 .btn-outline:hover {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: var(--color-text-main);
+  color: var(--color-bg);
+  box-shadow: 0 6px 16px rgba(28, 40, 38, 0.15);
 }
 
 .btn-ghost {
