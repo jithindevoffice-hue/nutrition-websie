@@ -13,7 +13,7 @@ export const Navbar = () => {
                     <div className={styles.logoIcon} style={{ background: 'transparent' }}>
                         <img src="/lotus-logo.png" alt="Lotus" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                     </div>
-                    <span className={styles.logoText}>Sonica Holistic Health</span>
+                    <span className={styles.logoText}>Sonika Holistic Health</span>
                 </Link>
 
                 <div className={`${styles.navLinksWrapper} ${isMenuOpen ? styles.mobileOpen : ''}`}>
