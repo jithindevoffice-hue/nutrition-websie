@@ -1,6 +1,6 @@
 import styles from './AboutSection.module.css';
 import { Award, CheckCircle2 } from 'lucide-react';
-import sonikaImg from '../assets/sonika.jpg';
+import sonikaImg from '../assets/sonika.png';
 
 export const AboutSection = () => {
     return (

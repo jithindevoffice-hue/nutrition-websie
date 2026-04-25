@@ -3,7 +3,7 @@ import { Footer } from '../components/Footer';
 import { Utensils, Flower2, Brain } from 'lucide-react';
 import styles from './AboutPage.module.css';
 import { Link } from 'react-router-dom';
-import sonikaImg from '../assets/sonika.jpg';
+import sonikaImg from '../assets/sonika.png';
 import aboutHeroImg from '../assets/about-hero.jpg';
 
 export const AboutPage = () => {
