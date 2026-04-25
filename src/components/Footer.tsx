@@ -30,7 +30,7 @@ export const Footer = () => {
                             <li><a href="#">About Sonika</a></li>
                             <li><a href="#">Signature Programs</a></li>
                             <li><a href="#">How it Works</a></li>
-                            <li><a href="#">Client Stories</a></li>
+                            <li><a href="/#testimonials">Testimonials</a></li>
                         </ul>
                     </div>
 

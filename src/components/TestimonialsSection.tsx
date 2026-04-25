@@ -84,7 +84,7 @@ export const TestimonialsSection = () => {
     ];
 
     return (
-        <section id="stories" className={`section ${styles.testimonials}`}>
+        <section id="testimonials" className={`section ${styles.testimonials}`}>
             <div className={styles.container}>
 
                 {/* Header Area */}
@@ -92,7 +92,7 @@ export const TestimonialsSection = () => {
                     <div>
                         <div className={styles.subtitleWrapper}>
                             <div className={styles.subtitleLine}></div>
-                            <span className={styles.subtitle}>CLIENT STORIES</span>
+                            <span className={styles.subtitle}>TESTIMONIALS</span>
                         </div>
 
                         <h2 className={styles.title}>
