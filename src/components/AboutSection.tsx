@@ -1,6 +1,6 @@
 import styles from './AboutSection.module.css';
 import { Award, CheckCircle2 } from 'lucide-react';
-import sonikaImg from '../assets/sonika.png';
+
 
 export const AboutSection = () => {
     return (
@@ -8,13 +8,13 @@ export const AboutSection = () => {
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
-                        <img src={sonikaImg} alt="Sonika" className={styles.image} />
+                        <img src="/Sonikaprofile.jpeg" alt="Sonika" className={styles.image} />
                         <div className={styles.badge}>
                             <div className={styles.badgeIcon}>
                                 <Award size={20} color="#b59c73" />
                             </div>
                             <div className={styles.badgeText}>
-                                <strong>4x Certified Specialist</strong>
+                                <strong>4x Specialist</strong>
                                 <span>Internationally accredited nutrition & wellness expert</span>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ export const AboutSection = () => {
                         </p>
                         <br />
                         <p>
-                            As a Certified Wellness Coach and Functional Medicine expert, I believe that health isn't "one size fits all." Whether you're looking to manage stress, gain strength, or finally get the sleep you need, I’m here to empower you with a plan designed for your specific life. You have the power to feel your best—I'm just here to help you unlock it.
+                            As a Wellness Coach and Functional Medicine expert, I believe that health isn't "one size fits all." Whether you're looking to manage stress, gain strength, or finally get the sleep you need, I’m here to empower you with a plan designed for your specific life. You have the power to feel your best—I'm just here to help you unlock it.
                         </p>
                     </div>
 
@@ -53,7 +53,7 @@ export const AboutSection = () => {
                         <div className={styles.credentialCard}>
                             <CheckCircle2 size={16} className={styles.checkIcon} />
                             <div>
-                                <strong>Certified Functional Medicine Coach</strong>
+                                <strong>Functional Medicine Coach</strong>
                                 <span>IFM — USA</span>
                             </div>
                         </div>

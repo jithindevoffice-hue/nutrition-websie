@@ -9,7 +9,7 @@ export const HeroSection = () => {
                 <div className={styles.content}>
                     <div className={styles.badge}>
                         <span className={styles.badgeDot}></span>
-                        CERTIFIED NUTRITION & WELLNESS COACH
+                        NUTRITION & WELLNESS COACH
                     </div>
 
                     <h1 className={styles.title}>
