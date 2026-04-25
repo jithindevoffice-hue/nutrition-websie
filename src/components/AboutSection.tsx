@@ -42,34 +42,23 @@ export const AboutSection = () => {
                         </p>
                     </div>
 
-                    <div className={styles.credentialsGrid}>
-                        <div className={styles.credentialCard}>
-                            <CheckCircle2 size={16} className={styles.checkIcon} />
-                            <div>
-                                <strong>MSc Clinical Nutrition</strong>
-                                <span>Symbiosis International University</span>
-                            </div>
+                    <div className={styles.infoGrid}>
+                        <div className={styles.infoColumn}>
+                            <h4 className={styles.infoTitle}>QUALIFICATIONS</h4>
+                            <ul className={styles.infoList}>
+                                <li>Nutrition & Wellness Coach, NHI California</li>
+                                <li>Food & Nutrition — Stanford University</li>
+                                <li>19+ Years Experience in Wellness</li>
+                            </ul>
                         </div>
-                        <div className={styles.credentialCard}>
-                            <CheckCircle2 size={16} className={styles.checkIcon} />
-                            <div>
-                                <strong>Functional Medicine Coach</strong>
-                                <span>IFM — USA</span>
-                            </div>
-                        </div>
-                        <div className={styles.credentialCard}>
-                            <CheckCircle2 size={16} className={styles.checkIcon} />
-                            <div>
-                                <strong>Gut Health Specialist</strong>
-                                <span>British Society of Gut Health</span>
-                            </div>
-                        </div>
-                        <div className={styles.credentialCard}>
-                            <CheckCircle2 size={16} className={styles.checkIcon} />
-                            <div>
-                                <strong>Diabetes Educator</strong>
-                                <span>International Diabetes Federation</span>
-                            </div>
+                        <div className={styles.infoColumn}>
+                            <h4 className={styles.infoTitle}>SPECIALIZATIONS</h4>
+                            <ul className={styles.infoList}>
+                                <li>Wellness Consultation</li>
+                                <li>Weightloss / Weightgain</li>
+                                <li>Lifestyle Assessment</li>
+                                <li>Fitness & Nutrition Advice</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
