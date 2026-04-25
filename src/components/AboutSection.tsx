@@ -1,5 +1,5 @@
 import styles from './AboutSection.module.css';
-import { Award, CheckCircle2 } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 
 export const AboutSection = () => {
