@@ -66,7 +66,7 @@ export const HeroAnimationSection = () => {
         // Extra fallback
         setTimeout(() => setIsStarted(true), 3000);
 
-    }, [isStarted]);
+    }, [isStarted, isMobile]);
 
     useEffect(() => {
         if (!isStarted || !canvasRef.current) return;

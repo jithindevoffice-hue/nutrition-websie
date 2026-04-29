@@ -5,6 +5,7 @@ import styles from './AboutPage.module.css';
 import { Link } from 'react-router-dom';
 
 import aboutHeroImg from '../assets/about-hero.jpg';
+import profilePic from '../assets/sonikaprofile.jpeg';
 
 export const AboutPage = () => {
     return (
@@ -90,7 +91,7 @@ export const AboutPage = () => {
                         <div className={styles.coachProfile}>
                             <div className={styles.coachImageWrapper}>
                                 <img
-                                    src="/sonikaprofile.jpeg"
+                                    src={profilePic}
                                     alt="Close up portrait of Sonika, professional wellness coach smiling"
                                     className={styles.coachImage}
                                 />

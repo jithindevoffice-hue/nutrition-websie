@@ -43,18 +43,18 @@ const INITIAL_DATA = {
 
 export const ApplyPage = () => {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<any>(INITIAL_DATA);
+  const [formData, setFormData] = useState<Record<string, string | string[]>>(INITIAL_DATA);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
   const totalSteps = 5;
 
-  const handleInputChange = (key: string, value: any) => {
-    setFormData((prev: any) => ({ ...prev, [key]: value }));
+  const handleInputChange = (key: string, value: string | string[]) => {
+    setFormData((prev: Record<string, string | string[]>) => ({ ...prev, [key]: value }));
   };
 
   const handleCheckboxToggle = (key: string, value: string) => {
-    setFormData((prev: any) => {
-      const current = prev[key] || [];
+    setFormData((prev: Record<string, string | string[]>) => {
+      const current = (prev[key] as string[]) || [];
       if (current.includes(value)) {
         return { ...prev, [key]: current.filter((v: string) => v !== value) };
       } else {

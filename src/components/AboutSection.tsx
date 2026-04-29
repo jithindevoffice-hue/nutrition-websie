@@ -1,5 +1,6 @@
 import styles from './AboutSection.module.css';
 import { Award } from 'lucide-react';
+import profilePic from '../assets/sonikaprofile.jpeg';
 
 const programsList = [
     "Weight management",
@@ -30,7 +31,7 @@ export const AboutSection = () => {
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
-                        <img src="/sonikaprofile.jpeg" alt="Sonika" className={styles.image} />
+                        <img src={profilePic} alt="Sonika" className={styles.image} />
                         <div className={styles.badge}>
                             <div className={styles.badgeIcon}>
                                 <Award size={20} color="#b59c73" />
