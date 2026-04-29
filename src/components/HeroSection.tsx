@@ -27,12 +27,12 @@ export const HeroSection = () => {
 
                     <div className={styles.statsRow}>
                         <div className={styles.statItem}>
-                            <h3>500+</h3>
+                            <h3>900+</h3>
                             <p>LIVES TRANSFORMED</p>
                         </div>
                         <div className={styles.statDivider}></div>
                         <div className={styles.statItem}>
-                            <h3>12+</h3>
+                            <h3>20+</h3>
                             <p>YEARS EXPERIENCE</p>
                         </div>
                         <div className={styles.statDivider}></div>
