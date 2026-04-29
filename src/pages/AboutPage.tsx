@@ -90,7 +90,7 @@ export const AboutPage = () => {
                         <div className={styles.coachProfile}>
                             <div className={styles.coachImageWrapper}>
                                 <img
-                                    src="/Sonikaprofile.jpeg"
+                                    src="/sonikaprofile.jpeg"
                                     alt="Close up portrait of Sonika, professional wellness coach smiling"
                                     className={styles.coachImage}
                                 />

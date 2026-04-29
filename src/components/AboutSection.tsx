@@ -8,7 +8,7 @@ export const AboutSection = () => {
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
-                        <img src="/Sonikaprofile.jpeg" alt="Sonika" className={styles.image} />
+                        <img src="/sonikaprofile.jpeg" alt="Sonika" className={styles.image} />
                         <div className={styles.badge}>
                             <div className={styles.badgeIcon}>
                                 <Award size={20} color="#b59c73" />
