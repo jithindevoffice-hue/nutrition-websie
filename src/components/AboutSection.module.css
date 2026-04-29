@@ -197,26 +197,5 @@
         height: 300px;
     }
 
-    .programsWrapper {
-        padding: 0 1rem;
-        margin: 3rem auto 0;
-    }
-}
 
-.programsWrapper {
-    max-width: 1200px;
-    margin: 4rem auto 0;
-    padding: 0 2rem;
-}
-
-.programsGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.programBtn {
-    text-transform: none;
-    letter-spacing: normal;
 }

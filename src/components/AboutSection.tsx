@@ -2,29 +2,6 @@ import styles from './AboutSection.module.css';
 import { Award } from 'lucide-react';
 import profilePic from '../assets/sonikaprofile.jpeg';
 
-const programsList = [
-    "Weight management",
-    "Hormonal imbalances",
-    "Polycystic Ovary Syndrome (PCOS)",
-    "Thyroid imbalances",
-    "Gut health issues",
-    "Irritable Bowel Syndrome (IBS) support",
-    "Blood sugar regulation / insulin resistance",
-    "Type 2 Diabetes (lifestyle support)",
-    "Chronic inflammation",
-    "Low energy and fatigue",
-    "Sleep issues and poor recovery",
-    "Stress management and burnout",
-    "Emotional eating and food cravings",
-    "Nutritional deficiencies",
-    "Skin health concerns",
-    "Women's health",
-    "Men's metabolic health",
-    "Digestive detox and metabolic reset",
-    "Lifestyle habit building",
-    "General wellness & preventive health"
-];
-
 export const AboutSection = () => {
     return (
         <section className={`section ${styles.about}`}>
@@ -84,16 +61,6 @@ export const AboutSection = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className={styles.programsWrapper}>
-                <div className={styles.programsGrid}>
-                    {programsList.map((program, index) => (
-                        <button key={index} type="button" className={`btn btn-outline ${styles.programBtn}`}>
-                            {program}
-                        </button>
-                    ))}
                 </div>
             </div>
         </section>

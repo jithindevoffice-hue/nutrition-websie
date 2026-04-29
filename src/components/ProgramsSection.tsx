@@ -1,6 +1,29 @@
 import styles from './ProgramsSection.module.css';
 import { ArrowUpRight } from 'lucide-react';
 
+const programsList = [
+    "WEIGHT MANAGEMENT",
+    "HORMONAL IMBALANCES",
+    "POLYCYSTIC OVARY SYNDROME (PCOS)",
+    "THYROID IMBALANCES",
+    "GUT HEALTH ISSUES",
+    "IRRITABLE BOWEL SYNDROME (IBS) SUPPORT",
+    "BLOOD SUGAR REGULATION / INSULIN RESISTANCE",
+    "TYPE 2 DIABETES (LIFESTYLE SUPPORT)",
+    "CHRONIC INFLAMMATION",
+    "LOW ENERGY AND FATIGUE",
+    "SLEEP ISSUES AND POOR RECOVERY",
+    "STRESS MANAGEMENT AND BURNOUT",
+    "EMOTIONAL EATING AND FOOD CRAVINGS",
+    "NUTRITIONAL DEFICIENCIES",
+    "SKIN HEALTH CONCERNS",
+    "WOMEN's HEALTH",
+    "MEN's METABOLIC HEALTH",
+    "DIGESTIVE DETOX AND METABOLIC RESET",
+    "LIFESTYLE HABIT BUILDING",
+    "GENERAL WELLNESS & PREVENTIVE HEALTH"
+];
+
 export const ProgramsSection = () => {
     return (
         <section className={`section ${styles.programs}`}>
@@ -115,6 +138,16 @@ export const ProgramsSection = () => {
                         </div>
                     </div>
 
+                </div>
+
+                <div className={styles.programsWrapper}>
+                    <div className={styles.programsGrid}>
+                        {programsList.map((program, index) => (
+                            <button key={index} type="button" className={`btn btn-outline ${styles.programBtn}`}>
+                                {program}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
