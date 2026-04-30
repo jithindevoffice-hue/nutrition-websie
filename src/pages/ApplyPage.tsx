@@ -373,6 +373,49 @@ export const ApplyPage = () => {
                   ))}
                 </div>
               </div>
+              <div className={styles.termsBox}>
+                <h4>Terms & Conditions</h4>
+                
+                <strong>1. This program provides nutrition, lifestyle, and dietary guidance only.</strong>
+                <ul>
+                  <li>It is not medical advice, diagnosis, or treatment.</li>
+                  <li>Please note this service does not replace professional medical care.</li>
+                </ul>
+
+                <strong>2. Client Acknowledgment</strong>
+                <p>The client confirms they:</p>
+                <ul>
+                  <li>Fully understand the scope of the program.</li>
+                  <li>Are voluntarily enrolling in this program.</li>
+                  <li>Have disclosed relevant health information truthfully.</li>
+                  <li>The client agrees they are responsible for consulting a qualified healthcare provider for any medical conditions.</li>
+                </ul>
+
+                <strong>3. Results Disclaimer:</strong>
+                <p>Results vary from person to person depending on:</p>
+                <ul>
+                  <li>Consistency</li>
+                  <li>Lifestyle</li>
+                  <li>Age, Body type and metabolism</li>
+                </ul>
+                <p>Guaranteed results are not promised.</p>
+
+                <strong>4. Refund Policy:</strong>
+                <p>A refund request must be made within 15 days from the commencement of the program.<br />No refunds will be issued after that.</p>
+
+                <strong>5. Program Commitment:</strong>
+                <ul>
+                  <li>The client agrees to actively participate and follow the program guidelines.</li>
+                  <li>Missed sessions or lack of adherence does not qualify for refunds or extensions unless agreed with the coach.</li>
+                </ul>
+
+                <strong>6. Termination:</strong>
+                <p>The consultant reserves the right to terminate services if:</p>
+                <ul>
+                  <li>Terms are violated</li>
+                  <li>Communication becomes inappropriate or abusive</li>
+                </ul>
+              </div>
             </div>
           )}
 
