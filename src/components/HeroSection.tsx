@@ -1,5 +1,5 @@
 import styles from './HeroSection.module.css';
-import { ShieldCheck, TrendingUp } from 'lucide-react';
+import { Dna, Sunrise } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const HeroSection = () => {
@@ -49,29 +49,28 @@ export const HeroSection = () => {
 
                         {/* Floating Badges */}
                         <div className={`${styles.floatingBadge} ${styles.badgeTopLeft}`}>
-                            <ShieldCheck size={18} className={styles.shieldIcon} />
+                            <Dna size={18} className={styles.shieldIcon} />
                             <div>
-                                <strong>THYROID REVERSAL</strong>
-                                <span>Root-cause nutrition protocol</span>
+                                <strong>THE VITALITY RESET</strong>
+                                <span>Sustainably balance thyroid & blood sugar.</span>
                             </div>
                         </div>
 
                         <div className={`${styles.floatingBadge} ${styles.badgeBottomRight}`}>
-                            <div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <span className={styles.slotsDot}></span>
-                                <span className={styles.slotsText}>LIMITED SLOTS</span>
+                                <strong>SUMMER INTAKE OPEN</strong>
                             </div>
-                            <strong>March intake open</strong>
-                            <span>Only 8 spots remaining</span>
+                            <span>Only 5 final spots remaining</span>
                         </div>
 
                         <div className={`${styles.floatingBadge} ${styles.badgeBottomLeft} ${styles.darkBadge}`}>
                             <div className={styles.iconCircleDark}>
-                                <TrendingUp size={16} color="#b59c73" />
+                                <Sunrise size={16} color="#b59c73" />
                             </div>
                             <div>
-                                <strong>-18 kg</strong>
-                                <span>in 4 months · Rekha M.</span>
+                                <strong>+3 HOURS DAILY ENERGY</strong>
+                                <span>in 4 months - Rekha M.</span>
                             </div>
                         </div>
                     </div>
