@@ -110,7 +110,7 @@ export const ApplyPage = () => {
             <div className={styles.successIcon}><Check size={32} /></div>
             <h2 className={styles.title}>Application Received!</h2>
             <p className={styles.subtitle}>
-              Thank you for taking the first step. Sonika will review your profile and reach out to you within 24–48 hours for the next steps.
+              Thank you for taking the first step. Sonika will review your profile and reach out to you within 24 hours for the next steps.
             </p>
             <button onClick={() => window.location.href = '/'} className="btn btn-primary" style={{marginTop: '30px'}}>
               Return Home
