@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ApplyPage.module.css';
-import { Check, ArrowRight, ArrowLeft, Loader2 } from 'lucide-react';
-
+import { Check, ArrowRight, ArrowLeft, Loader2, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdCHMxNLZeuxf6f0pcRhrda9p-7Pvxs1yWZ62fLYTc6pwWIBQ/formResponse';
 
 const INITIAL_DATA = {
@@ -424,7 +424,11 @@ export const ApplyPage = () => {
               <button type="button" onClick={prevStep} className="btn btn-outline" style={{padding: '0.6rem 1.2rem'}}>
                 <ArrowLeft size={18} style={{marginRight: '8px'}} /> Back
               </button>
-            ) : <div />}
+            ) : (
+              <Link to="/" className="btn btn-outline" style={{padding: '0.6rem 1.2rem', display: 'inline-flex', alignItems: 'center', textDecoration: 'none'}}>
+                <Home size={18} style={{marginRight: '8px'}} /> Home
+              </Link>
+            )}
 
             <button type="submit" className="btn btn-accent" disabled={status === 'submitting'}>
               {status === 'submitting' ? (
