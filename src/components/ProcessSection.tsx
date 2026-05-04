@@ -38,7 +38,8 @@ export const ProcessSection = () => {
 
                         <h3 className={styles.cardTitle}>Your Wellness Blueprint Starts Here.</h3>
                         <p className={styles.cardDescription}>
-                            Every transformation begins with truly knowing you. This confidential call is where I listen, assess, and begin building a protocol designed exclusively around your body, your lifestyle, and your goals — covering your health history, nutrition, sleep, stress, and what's been holding you back.
+                            Before we build your transformation, I need to know you — your health history, lifestyle, nutrition, sleep, stress, and goals.<br />
+                            One confidential call. Your entire protocol, built from it.
                         </p>
 
                         <div className={styles.cardFooter}>
