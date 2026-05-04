@@ -127,7 +127,7 @@ export const ProgramsSection = () => {
                         </div>
                         <div className={styles.cardContentLight}>
                             <span className={styles.cardNumberLight}>04</span>
-                            <h3 className={styles.cardTitleDark}>Diabetes Reversal Program</h3>
+                            <h3 className={styles.cardTitleDark}>Insulin Resistance/Diabetes Program</h3>
                             <p className={styles.cardDescDark}>Take back control of your blood sugar</p>
 
                             <div className={styles.cardFooterLight}>
