@@ -36,7 +36,7 @@ export const ProcessSection = () => {
                             <span className={styles.stepNumber}>01</span>
                         </div>
 
-                        <h3 className={styles.cardTitle}>Your Wellness Blueprint Starts Here.</h3>
+                        <h3 className={styles.cardTitle}>Crafted For You. Precisely</h3>
                         <p className={styles.cardDescription}>
                             Before we build your transformation, I need to know you — your health history, lifestyle, nutrition, sleep, stress, and goals.<br />
                             One confidential call. Your entire protocol, built from it.
