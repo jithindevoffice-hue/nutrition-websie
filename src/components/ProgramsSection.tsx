@@ -105,7 +105,7 @@ export const ProgramsSection = () => {
                         </div>
                         <div className={styles.cardContentLight}>
                             <span className={styles.cardNumberLight}>03</span>
-                            <h3 className={styles.cardTitleDark}>Thyroid Reversal Protocol</h3>
+                            <h3 className={styles.cardTitleDark}>Thyroid Issues/Protocols</h3>
                             <p className={styles.cardDescDark}>Recalibrate your thyroid naturally</p>
 
                             <div className={styles.cardFooterLight}>
