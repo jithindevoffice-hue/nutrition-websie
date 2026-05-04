@@ -46,9 +46,10 @@ export const AboutSection = () => {
                         <div className={styles.infoColumn}>
                             <h4 className={styles.infoTitle}>QUALIFICATIONS</h4>
                             <ul className={styles.infoList}>
-                                <li>Nutrition & Wellness Coach, NHI California</li>
-                                <li>Food & Nutrition — Stanford University</li>
-                                <li>19+ Years Experience in Wellness</li>
+                                <li>Certified Nutrition & Wellness Coach</li>
+                                <li>Certification in Food & Nutrition</li>
+                                <li>Functional Medicine Expert</li>
+                                <li>20yrs+ Years Experience In Wellness</li>
                             </ul>
                         </div>
                         <div className={styles.infoColumn}>
