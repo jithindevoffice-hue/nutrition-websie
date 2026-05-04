@@ -64,7 +64,7 @@ export const ProcessSection = () => {
 
                         <div className={styles.cardFooter}>
                             <span className={styles.tagDot}></span>
-                            Confidential · Takes 15 min
+                            Takes 15 min
                         </div>
                     </div>
 
