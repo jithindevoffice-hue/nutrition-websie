@@ -38,7 +38,7 @@ export const AboutSection = () => {
                         </p>
                         <br />
                         <p>
-                            As a Wellness Coach and Functional Medicine expert, I believe that health isn't "one size fits all." Whether you're looking to manage stress, gain strength, or finally get the sleep you need, I’m here to empower you with a plan designed for your specific life. You have the power to feel your best—I'm just here to help you unlock it.
+                            As a Wellness Coach and Functional Medicine expert, I believe that health isn't "one size fits all." Whether you're looking to break free from managing exhaustion, stubborn weight loss, stress, gain strength or finally get the sleep you need, I’m here to empower you with a plan designed for your specific life. You have the power to feel your best—I'm just here to help you unlock it.
                         </p>
                     </div>
 
