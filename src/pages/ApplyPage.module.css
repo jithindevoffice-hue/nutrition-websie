@@ -148,9 +148,21 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid var(--color-border);
+}
+
+.footerLeft {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerRight {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .successState {

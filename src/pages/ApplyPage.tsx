@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './ApplyPage.module.css';
 import { Check, ArrowRight, ArrowLeft, Loader2, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdCHMxNLZeuxf6f0pcRhrda9p-7Pvxs1yWZ62fLYTc6pwWIBQ/formResponse';
+
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf2tyuQ3zq5awHX8naWbgVmax7LZZ40C1OQ8VCq4ARXFU2PfQ/formResponse';
 
 const INITIAL_DATA = {
   // Section 1
@@ -20,7 +21,6 @@ const INITIAL_DATA = {
   'entry.1431311347': '', // Height
   'entry.307765206': '', // Weight
   'entry.1502620648': [], // Conditions (Checkboxes)
-  'entry.1166738592': [], // To quit (Checkboxes)
   'entry.1527681206': '', // Medications
   
   // Section 3
@@ -35,6 +35,25 @@ const INITIAL_DATA = {
   'entry.1878947756': '', // Water
   'entry.622811763': '', // Diet
   
+  // Section 5
+  'entry.1592966588': '', // Have you tried weight loss before?
+  'entry.924467128': [], // What have you tried? (Checkboxes)
+  'entry.881198409': '', // Tired and fatigued
+  'entry.1273095860': '', // Allergies
+  'entry.126131422': '', // Hairfall
+  'entry.858278722': '', // Swelling in face
+  'entry.1738298525': '', // Wake up tired
+  'entry.1052139804': '', // Brain fog
+  'entry.1691978642': '', // Fat around belly
+  'entry.1930658204': '', // Intestinal gas/bloating
+  'entry.1974586643': '', // Acidity
+  'entry.1163979444': '', // Stomach not cleared
+  'entry.1228555518': '', // Sleepy after eating
+  
+  // Section 6
+  'entry.1805856325': '', // Why do you want to lose weight?
+  'entry.241789880': '', // Biggest challenge right now?
+  
   // Section 9
   'entry.113397252': '', // Guidance
   'entry.2018579287': '', // Invest
@@ -46,7 +65,7 @@ export const ApplyPage = () => {
   const [formData, setFormData] = useState<Record<string, string | string[]>>(INITIAL_DATA);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-  const totalSteps = 5;
+  const totalSteps = 7;
 
   const handleInputChange = (key: string, value: string | string[]) => {
     setFormData((prev: Record<string, string | string[]>) => ({ ...prev, [key]: value }));
@@ -85,8 +104,6 @@ export const ApplyPage = () => {
     });
 
     try {
-      // Use no-cors to avoid blocking, though it means we won't get a proper response body
-      // Google Forms allows this submission style
       await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
         body: formPayload,
@@ -96,8 +113,6 @@ export const ApplyPage = () => {
       window.scrollTo(0, 0);
     } catch (err) {
       console.error('Submission failed', err);
-      // In no-cors, success usually triggers an opaque response or a failure in some browsers
-      // But usually it goes through. We'll assume success for now.
       setStatus('success');
     }
   };
@@ -122,6 +137,8 @@ export const ApplyPage = () => {
   }
 
   const progress = (step / totalSteps) * 100;
+
+  const yesNoOptions = ['Yes', 'No'];
 
   return (
     <div className={styles.page}>
@@ -314,6 +331,27 @@ export const ApplyPage = () => {
               </div>
 
               <div className={styles.fieldGroup}>
+                <label className={styles.label}>Do you experience cravings?</label>
+                <div className={styles.optionsGrid}>
+                  {yesNoOptions.map(o => (
+                    <div key={o} 
+                      className={`${styles.radioOption} ${formData['entry.2024755164'] === o ? styles.selected : ''}`}
+                      onClick={() => handleInputChange('entry.2024755164', o)}
+                    >
+                      {o}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {formData['entry.2024755164'] === 'Yes' && (
+                <div className={styles.fieldGroup}>
+                  <label className={styles.label}>What do you crave most?</label>
+                  <input className={styles.input} value={formData['entry.1083293605']} onChange={e => handleInputChange('entry.1083293605', e.target.value)} />
+                </div>
+              )}
+
+              <div className={styles.fieldGroup}>
                 <label className={styles.label}>Water Intake (Litres) *</label>
                 <div className={styles.optionsGrid}>
                   {['Less than 1L', '1–2L', '2–3L', 'More than 3L'].map(w => (
@@ -331,9 +369,87 @@ export const ApplyPage = () => {
 
           {step === 5 && (
             <div className={styles.formSection}>
-              <h3 className={styles.label}>Final Section: Commitment</h3>
+              <h3 className={styles.label}>Section 5: Why Nothing Worked</h3>
+              
               <div className={styles.fieldGroup}>
-                <label className={styles.label}>Ready to follow guidance seriously? *</label>
+                <label className={styles.label}>Have you tried weight loss before? *</label>
+                <div className={styles.optionsGrid}>
+                  {yesNoOptions.map(o => (
+                    <div key={o} 
+                      className={`${styles.radioOption} ${formData['entry.1592966588'] === o ? styles.selected : ''}`}
+                      onClick={() => handleInputChange('entry.1592966588', o)}
+                    >
+                      {o}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.fieldGroup}>
+                <label className={styles.label}>What have you tried?</label>
+                <div className={styles.checkboxGrid}>
+                  {['Dieting', 'Gym', 'Intermittent fasting', 'Keto', 'Nothing worked'].map(c => (
+                    <div key={c} 
+                      className={`${styles.checkboxOption} ${formData['entry.924467128'].includes(c) ? styles.selected : ''}`}
+                      onClick={() => handleCheckboxToggle('entry.924467128', c)}
+                    >
+                      <div className={styles.checkbox}>{formData['entry.924467128'].includes(c) && <Check size={12} />}</div>
+                      {c}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {[
+                { id: 'entry.881198409', label: 'Do you commonly feel tired and fatigued for no apparent reason?' },
+                { id: 'entry.1273095860', label: 'Do you suffer from any kind of allergies?' },
+                { id: 'entry.126131422', label: 'Do you have excessive hairfall?' },
+                { id: 'entry.858278722', label: 'Do you have swelling in your face?' },
+                { id: 'entry.1738298525', label: "Do you frequently wake up tired/drained out in the morning as if you didn't sleep?" },
+                { id: 'entry.1052139804', label: 'Do you experience brain fog - frequently confused, forgetful, lacking clarity and focus?' },
+                { id: 'entry.1691978642', label: 'Do you have more fat around belly/waist area?' },
+                { id: 'entry.1930658204', label: 'Do you suffer from frequent intestinal gas or bloating?' },
+                { id: 'entry.1974586643', label: 'Do you frequently get acidity/gastric reflux?' },
+                { id: 'entry.1163979444', label: 'Do you feel your stomach has not cleared completely (>thrice a week)?' },
+                { id: 'entry.1228555518', label: 'Do you feel sleepy after eating food?' },
+              ].map(q => (
+                <div className={styles.fieldGroup} key={q.id}>
+                  <label className={styles.label}>{q.label}</label>
+                  <div className={styles.optionsGrid}>
+                    {yesNoOptions.map(o => (
+                      <div key={o} 
+                        className={`${styles.radioOption} ${formData[q.id] === o ? styles.selected : ''}`}
+                        onClick={() => handleInputChange(q.id, o)}
+                      >
+                        {o}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {step === 6 && (
+            <div className={styles.formSection}>
+              <h3 className={styles.label}>Section 6: Goals Clarity</h3>
+              <div className={styles.fieldGroup}>
+                <label className={styles.label}>Why do you want to lose weight? *</label>
+                <textarea required className={styles.input} style={{minHeight: '100px'}} value={formData['entry.1805856325']} onChange={e => handleInputChange('entry.1805856325', e.target.value)} />
+              </div>
+
+              <div className={styles.fieldGroup}>
+                <label className={styles.label}>What is your biggest challenge right now? *</label>
+                <textarea required className={styles.input} style={{minHeight: '100px'}} value={formData['entry.241789880']} onChange={e => handleInputChange('entry.241789880', e.target.value)} />
+              </div>
+            </div>
+          )}
+
+          {step === 7 && (
+            <div className={styles.formSection}>
+              <h3 className={styles.label}>Final Section: Commitment Check</h3>
+              <div className={styles.fieldGroup}>
+                <label className={styles.label}>Are you ready to follow guidance seriously? *</label>
                 <div className={styles.optionsGrid}>
                   {['Yes', 'Not sure'].map(o => (
                     <div key={o} 
@@ -347,7 +463,7 @@ export const ApplyPage = () => {
               </div>
 
               <div className={styles.fieldGroup}>
-                <label className={styles.label}>Willing to invest in your health? *</label>
+                <label className={styles.label}>Are you willing to invest in your health? *</label>
                 <div className={styles.optionsGrid}>
                   {['Yes', 'Maybe', 'Need sometime'].map(o => (
                     <div key={o} 
@@ -373,6 +489,7 @@ export const ApplyPage = () => {
                   ))}
                 </div>
               </div>
+
               <div className={styles.termsBox}>
                 <h4>Terms & Conditions</h4>
                 
@@ -420,25 +537,29 @@ export const ApplyPage = () => {
           )}
 
           <div className={styles.footer}>
-            {step > 1 ? (
-              <button type="button" onClick={prevStep} className="btn btn-outline" style={{padding: '0.6rem 1.2rem'}}>
-                <ArrowLeft size={18} style={{marginRight: '8px'}} /> Back
-              </button>
-            ) : (
-              <Link to="/" className="btn btn-outline" style={{padding: '0.6rem 1.2rem', display: 'inline-flex', alignItems: 'center', textDecoration: 'none'}}>
-                <Home size={18} style={{marginRight: '8px'}} /> Home
-              </Link>
-            )}
-
-            <button type="submit" className="btn btn-accent" disabled={status === 'submitting'}>
-              {status === 'submitting' ? (
-                <><Loader2 size={18} className="animate-spin" style={{marginRight: '8px'}} /> Submitting...</>
-              ) : step === totalSteps ? (
-                'Submit Application'
+            <div className={styles.footerLeft}>
+              {step > 1 ? (
+                <button type="button" onClick={prevStep} className="btn btn-outline" style={{padding: '0.6rem 1.2rem'}}>
+                  <ArrowLeft size={18} style={{marginRight: '8px'}} /> Back
+                </button>
               ) : (
-                <>Next <ArrowRight size={18} style={{marginLeft: '8px'}} /></>
+                <Link to="/" className="btn btn-outline" style={{padding: '0.6rem 1.2rem', display: 'inline-flex', alignItems: 'center', textDecoration: 'none'}}>
+                  <Home size={18} style={{marginRight: '8px'}} /> Home
+                </Link>
               )}
-            </button>
+            </div>
+
+            <div className={styles.footerRight}>
+              <button type="submit" className="btn btn-accent" disabled={status === 'submitting'}>
+                {status === 'submitting' ? (
+                  <><Loader2 size={18} className="animate-spin" style={{marginRight: '8px'}} /> Submitting...</>
+                ) : step === totalSteps ? (
+                  'Submit Application'
+                ) : (
+                  <>Next <ArrowRight size={18} style={{marginLeft: '8px'}} /></>
+                )}
+              </button>
+            </div>
           </div>
         </form>
       </div>
