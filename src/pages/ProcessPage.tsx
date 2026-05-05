@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import styles from './ProcessPage.module.css';
-import { FileText, MessageSquare, CreditCard } from 'lucide-react';
+import { FileText, MessageSquare, CreditCard, Phone } from 'lucide-react';
 import aboutHeroImg from '../assets/about-hero.jpg';
 
 export const ProcessPage = () => {
@@ -40,9 +40,30 @@ export const ProcessPage = () => {
                             <div className={styles.card}>
                                 <div className={styles.cardHeader}>
                                     <div className={styles.iconCircle}>
-                                        <FileText size={24} color="#b59c73" />
+                                        <Phone size={24} color="#b59c73" />
                                     </div>
                                     <span className={styles.stepNumber}>01</span>
+                                </div>
+
+                                <h3 className={styles.cardTitle}>Crafted For You. Precisely</h3>
+                                <p className={styles.cardDescription}>
+                                    Before we build your transformation, I need to know you — your health history, lifestyle, nutrition, sleep, stress, and goals.<br />
+                                    One confidential call. Your entire protocol, built from it.
+                                </p>
+
+                                <div className={styles.cardFooter}>
+                                    <span className={styles.tagDot}></span>
+                                    Book Your Pre-Consultation Call
+                                </div>
+                            </div>
+
+                            {/* Step 2 */}
+                            <div className={styles.card}>
+                                <div className={styles.cardHeader}>
+                                    <div className={styles.iconCircle}>
+                                        <FileText size={24} color="#b59c73" />
+                                    </div>
+                                    <span className={styles.stepNumber}>02</span>
                                 </div>
 
                                 <h3 className={styles.cardTitle}>Complete Your Wellness Profile</h3>
@@ -56,13 +77,13 @@ export const ProcessPage = () => {
                                 </div>
                             </div>
 
-                            {/* Step 2 */}
+                            {/* Step 3 */}
                             <div className={styles.card}>
                                 <div className={styles.cardHeader}>
                                     <div className={styles.iconCircle}>
                                         <MessageSquare size={24} color="#b59c73" />
                                     </div>
-                                    <span className={styles.stepNumber}>02</span>
+                                    <span className={styles.stepNumber}>03</span>
                                 </div>
 
                                 <h3 className={styles.cardTitle}>Initial Discovery Consultation</h3>
@@ -76,13 +97,13 @@ export const ProcessPage = () => {
                                 </div>
                             </div>
 
-                            {/* Step 3 */}
+                            {/* Step 4 */}
                             <div className={styles.card}>
                                 <div className={styles.cardHeader}>
                                     <div className={styles.iconCircle}>
                                         <CreditCard size={24} color="#b59c73" />
                                     </div>
-                                    <span className={styles.stepNumber}>03</span>
+                                    <span className={styles.stepNumber}>04</span>
                                 </div>
 
                                 <h3 className={styles.cardTitle}>Enroll & Begin Your Journey</h3>
