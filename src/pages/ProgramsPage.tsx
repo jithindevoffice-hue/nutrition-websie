@@ -3,6 +3,7 @@ import { Footer } from '../components/Footer';
 import styles from './ProgramsPage.module.css';
 import stressSleepImg from '../assets/stress-sleep.png';
 import muscleBuildingImg from '../assets/muscle-building.png';
+import { Link } from 'react-router-dom';
 
 export const ProgramsPage = () => {
     return (
@@ -187,9 +188,9 @@ export const ProgramsPage = () => {
                 <section className={styles.cta}>
                     <h2 className={styles.ctaQuote}>"Every journey begins with a single step. Let me walk it with you."</h2>
                     <p className={styles.ctaAuthor}>— Sonika Babu, Wellness Coach</p>
-                    <button className="btn btn-primary" onClick={() => window.location.href='/profile'}>
+                    <Link to="/apply" className="btn btn-primary">
                         📞 Book Your Pre-Consultation @2499 Today
-                    </button>
+                    </Link>
                 </section>
             </main>
 
