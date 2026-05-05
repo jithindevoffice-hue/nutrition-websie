@@ -1,5 +1,6 @@
 import styles from './ProgramsSection.module.css';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const programsList = [
     "WEIGHT MANAGEMENT",
@@ -65,9 +66,9 @@ export const ProgramsSection = () => {
                             </div>
 
                             <div className={styles.cardFooter}>
-                                <button className={styles.iconBtnDark}>
+                                <Link to="/apply" className={styles.iconBtnDark}>
                                     <ArrowUpRight size={20} color="white" />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                         <div className={styles.cardImageWrapper}>
@@ -90,9 +91,9 @@ export const ProgramsSection = () => {
                                 <div>
                                     <div className={styles.durationDark}>8 Weeks</div>
                                 </div>
-                                <button className={styles.iconBtnLight}>
+                                <Link to="/apply" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -112,9 +113,9 @@ export const ProgramsSection = () => {
                                 <div>
                                     <div className={styles.durationDark}>16 Weeks</div>
                                 </div>
-                                <button className={styles.iconBtnLight}>
+                                <Link to="/apply" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -131,9 +132,9 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Take back control of your blood sugar</p>
 
                             <div className={styles.cardFooterLight}>
-                                <button className={styles.iconBtnLight}>
+                                <Link to="/apply" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
