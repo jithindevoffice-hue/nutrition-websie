@@ -37,9 +37,7 @@ export const Footer = () => {
                     <div className={styles.linksColumn}>
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Medical Disclaimer</a></li>
+                            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                         </ul>
                     </div>
 
