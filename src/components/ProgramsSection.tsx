@@ -27,7 +27,7 @@ const programsList = [
 
 export const ProgramsSection = () => {
     return (
-        <section className={`section ${styles.programs}`}>
+        <section id="programs" className={`section ${styles.programs}`}>
             <div className={styles.container}>
 
                 {/* Header Area */}

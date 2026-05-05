@@ -4,7 +4,7 @@ import profilePic from '../assets/sonikaprofile.jpeg';
 
 export const AboutSection = () => {
     return (
-        <section className={`section ${styles.about}`}>
+        <section id="about" className={`section ${styles.about}`}>
             <div className={styles.container}>
                 <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
