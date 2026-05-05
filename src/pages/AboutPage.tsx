@@ -110,7 +110,7 @@ export const AboutPage = () => {
                             <p className={styles.ctaText}>
                                 Take the first step towards a more vibrant you with a personalized wellness assessment.
                             </p>
-                            <Link to="/profile" className={styles.ctaButton}>
+                            <Link to="/apply" className={styles.ctaButton}>
                                 Start Your Profile
                             </Link>
                         </div>
