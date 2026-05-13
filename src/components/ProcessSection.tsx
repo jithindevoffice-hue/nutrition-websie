@@ -30,9 +30,15 @@ export const ProcessSection = () => {
                     {/* Step 1 */}
                     <div className={styles.card}>
                         <div className={styles.cardHeader}>
-                            <div className={styles.iconCircle}>
+                            <a 
+                                href="https://calendly.com/sonika66866/book_a_pre-consultation?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAb21jcARqI5BleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAac0E5KnPm6_a6u6dsjzvxJbnPt5RfKLEs6twPL30w_YVkBUtwsG3Mw9Td3M7Q_aem_tNHioKP2oT107obWPVacLQ&amp;utm_id=97760_v0_s00_e0_tv3_a1dennh6z5rntm&amp;month=2026-05" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className={styles.iconCircle}
+                                style={{ cursor: 'pointer', textDecoration: 'none', display: 'flex' }}
+                            >
                                 <Phone size={24} color="#b59c73" />
-                            </div>
+                            </a>
                             <span className={styles.stepNumber}>01</span>
                         </div>
 
@@ -44,7 +50,14 @@ export const ProcessSection = () => {
 
                         <div className={styles.cardFooter}>
                             <span className={styles.tagDot}></span>
-                            Book Your Pre-Consultation Call
+                            <a 
+                                href="https://calendly.com/sonika66866/book_a_pre-consultation?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAb21jcARqI5BleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAac0E5KnPm6_a6u6dsjzvxJbnPt5RfKLEs6twPL30w_YVkBUtwsG3Mw9Td3M7Q_aem_tNHioKP2oT107obWPVacLQ&amp;utm_id=97760_v0_s00_e0_tv3_a1dennh6z5rntm&amp;month=2026-05" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                style={{ color: 'inherit', textDecoration: 'none', cursor: 'pointer' }}
+                            >
+                                Book Your Pre-Consultation Call
+                            </a>
                         </div>
                     </div>
 
