@@ -86,12 +86,19 @@
 }
 
 .card {
-    background-color: var(--color-card-bg);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-md);
-    padding: 3rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    padding: 3rem 2.5rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .cardTop {
@@ -102,8 +109,8 @@
 }
 
 .tagPill {
-    background-color: var(--color-bg);
-    color: var(--color-text-muted);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.65rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
@@ -120,10 +127,10 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: var(--color-bg);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 1rem 1.25rem;
     border-radius: var(--border-radius-sm);
-    color: var(--color-text-main);
+    color: white;
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 2rem;
@@ -149,15 +156,15 @@
 }
 
 .beforeBox {
-    background-color: #fff0f0;
+    background-color: rgba(208, 117, 117, 0.1);
 }
 
 .afterBox {
-    background-color: var(--color-success-bg);
+    background-color: rgba(85, 181, 125, 0.1);
 }
 
 .boxLabelBefore {
-    color: #d17575;
+    color: #e59090;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -165,7 +172,7 @@
 }
 
 .boxLabelAfter {
-    color: #55b57d;
+    color: #82d4a3;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -173,26 +180,26 @@
 }
 
 .boxValueBefore {
-    color: #c04242;
+    color: #f26b6b;
     font-size: 1.125rem;
     font-weight: 600;
 }
 
 .boxValueAfter {
-    color: #3b9461;
+    color: #51c484;
     font-size: 1.125rem;
     font-weight: 600;
 }
 
 .arrowBetween {
-    color: var(--color-border);
+    color: rgba(255, 255, 255, 0.3);
     flex-shrink: 0;
 }
 
 .quote {
     font-style: italic;
     font-size: 1.125rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
     margin: 0 0 2.5rem 0;
     flex: 1;
@@ -202,7 +209,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.5rem;
 }
 
@@ -215,14 +222,14 @@
 
 .clientInfo strong {
     display: block;
-    color: var(--color-text-main);
+    color: white;
     font-weight: 700;
     font-size: 0.95rem;
 }
 
 .clientInfo span {
     display: block;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.8rem;
 }
 
