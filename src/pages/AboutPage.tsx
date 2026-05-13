@@ -110,9 +110,14 @@ export const AboutPage = () => {
                             <p className={styles.ctaText}>
                                 Take the first step towards a more vibrant you with a personalized wellness assessment.
                             </p>
-                            <Link to="/apply" className={styles.ctaButton}>
+                            <a 
+                                href="https://calendly.com/sonika66866/book_a_pre-consultation?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAb21jcARqI5BleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAac0E5KnPm6_a6u6dsjzvxJbnPt5RfKLEs6twPL30w_YVkBUtwsG3Mw9Td3M7Q_aem_tNHioKP2oT107obWPVacLQ&amp;utm_id=97760_v0_s00_e0_tv3_a1dennh6z5rntm&amp;month=2026-05" 
+                                className={styles.ctaButton}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 Book Your Pre-Consultation Call Now
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </section>
