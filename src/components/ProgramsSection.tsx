@@ -88,9 +88,6 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Heal your second brain</p>
 
                             <div className={styles.cardFooterLight}>
-                                <div>
-                                    <div className={styles.durationDark}>8 Weeks</div>
-                                </div>
                                 <Link to="/apply" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </Link>
@@ -110,9 +107,6 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Recalibrate your thyroid naturally</p>
 
                             <div className={styles.cardFooterLight}>
-                                <div>
-                                    <div className={styles.durationDark}>16 Weeks</div>
-                                </div>
                                 <Link to="/apply" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </Link>
