@@ -1,6 +1,6 @@
 import styles from './ClinicalPartnershipSection.module.css';
 import { Microscope, ShieldCheck } from 'lucide-react';
-import gutImage from '../assets/microbiotx-gut-science.png';
+import gutImage from '../assets/finger-prick-test.jpg';
 
 export const ClinicalPartnershipSection = () => {
     return (
