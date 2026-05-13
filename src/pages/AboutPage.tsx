@@ -111,7 +111,7 @@ export const AboutPage = () => {
                                 Take the first step towards a more vibrant you with a personalized wellness assessment.
                             </p>
                             <Link to="/apply" className={styles.ctaButton}>
-                                Start Your Profile
+                                Book Your Pre-Consultation Call Now
                             </Link>
                         </div>
                     </div>
