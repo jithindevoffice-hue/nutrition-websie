@@ -2,7 +2,6 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { Utensils, Flower2, Brain } from 'lucide-react';
 import styles from './AboutPage.module.css';
-import { Link } from 'react-router-dom';
 
 import aboutHeroImg from '../assets/about-hero.jpg';
 import profilePic from '../assets/sonikaprofile.jpeg';
