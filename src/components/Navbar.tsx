@@ -21,7 +21,7 @@ export const Navbar = () => {
                         <li><NavLink to="/about" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>ABOUT</NavLink></li>
                         <li><NavLink to="/programs" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>PROGRAMS</NavLink></li>
                         <li><a href="/#clinical-partnership" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>CLINICAL PARTNERSHIP</a></li>
-                        <li><a href="/#testimonials" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>TESTIMONIALS</a></li>
+                        <li><a href="/#testimonials" onClick={() => setIsMenuOpen(false)} className={styles.navLink}>SUCCESS STORIES</a></li>
                     </ul>
 
                     <div className={styles.actions}>
