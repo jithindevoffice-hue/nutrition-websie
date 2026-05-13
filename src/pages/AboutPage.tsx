@@ -96,7 +96,7 @@ export const AboutPage = () => {
                                     className={styles.coachImage}
                                 />
                             </div>
-                            <p className={styles.coachName}>Sonika</p>
+                            <p className={styles.coachName}>Sonika Saraswathi Babu</p>
                             <p className={styles.coachTitle}>Founder & Lead Coach</p>
                         </div>
                     </div>
