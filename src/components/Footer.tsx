@@ -8,12 +8,12 @@ export const Footer = () => {
             <div className={styles.container}>
                 <div className={styles.topSection}>
                     <div className={styles.brand}>
-                        <div className={styles.logo}>
+                        <Link to="/" className={styles.logo} onClick={() => window.scrollTo(0, 0)} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div className={styles.logoIcon} style={{ background: 'transparent' }}>
                                 <img src="/lotus-logo.png" alt="Lotus" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                             </div>
                             <span className={styles.logoText}>Sonika Holistic Health</span>
-                        </div>
+                        </Link>
                         <p className={styles.brandDesc}>
                             Root-cause nutrition protocols for lasting vitality and health.
                         </p>
