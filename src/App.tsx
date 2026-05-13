@@ -18,6 +18,7 @@ function App() {
       <Route path="/apply" element={<ApplyPage />} />
       <Route path="/profile" element={<ProfileFormPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/terms-conditions" element={<PrivacyPolicyPage />} />
     </Routes>
   )
 }
