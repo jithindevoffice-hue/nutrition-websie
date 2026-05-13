@@ -3,6 +3,7 @@ import { HeroSection } from '../components/HeroSection';
 import { AboutSection } from '../components/AboutSection';
 import { ProgramsSection } from '../components/ProgramsSection';
 import { ProcessSection } from '../components/ProcessSection';
+import { ClinicalPartnershipSection } from '../components/ClinicalPartnershipSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { Footer } from '../components/Footer';
 import { HeroAnimationSection } from '../components/HeroAnimationSection';
@@ -17,6 +18,7 @@ export const LandingPage = () => {
             <AboutSection />
             <ProgramsSection />
             <ProcessSection />
+            <ClinicalPartnershipSection />
             <TestimonialsSection />
             <Footer />
         </div>
