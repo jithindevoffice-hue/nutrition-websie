@@ -577,33 +577,102 @@ export const ApplyPage = () => {
 
           {step === 7 && (
             <div className={styles.formSection}>
-              <h3 className={styles.label}>Final Step: Terms & Conditions</h3>
+              <h3 className={styles.label}>Final Step: Terms & Conditions & Consent</h3>
               
-              <div className={styles.termsBox}>
-                <h4>Please review and confirm</h4>
+              <div className={styles.termsBox} style={{ maxHeight: '500px', overflowY: 'auto', paddingRight: '15px' }}>
+                <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', marginBottom: '20px' }}>Terms & Conditions</h4>
                 
-                <strong>1. Scope of Program</strong>
-                <p>This program provides nutrition, lifestyle, and dietary guidance only. It is not medical advice, diagnosis, or treatment.</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    <section>
+                        <strong>1. Scope of Program</strong>
+                        <p>This program provides nutrition, lifestyle, and dietary guidance only.</p>
+                        <ul>
+                            <li>It is not medical advice, diagnosis, or treatment.</li>
+                            <li>Please note this service does not replace professional medical care.</li>
+                        </ul>
+                    </section>
 
-                <strong>2. Client Acknowledgment</strong>
-                <p>The client confirms they are voluntarily enrolling and have disclosed health information truthfully. The client is responsible for seeking professional medical care for medical concerns.</p>
+                    <section>
+                        <strong>2. Client Acknowledgment</strong>
+                        <p>The client confirms they:</p>
+                        <ul>
+                            <li>Fully understand the scope of the program.</li>
+                            <li>Are voluntarily enrolling in this program.</li>
+                            <li>Have disclosed relevant health information truthfully.</li>
+                            <li>The client agrees that they are responsible for seeking advice from a qualified healthcare provider for any medical concerns that arise during or outside of the program. The consultant accepts no liability for outcomes arising from withheld or inaccurate health disclosures.</li>
+                        </ul>
+                    </section>
 
-                <strong>3. Results Disclaimer</strong>
-                <p>Results vary from person to person. Guaranteed results are not promised.</p>
+                    <section>
+                        <strong>3. Results Disclaimer:</strong>
+                        <p>Results vary from person to person depending on:</p>
+                        <ul>
+                            <li>Consistency</li>
+                            <li>Lifestyle</li>
+                            <li>Age, Body type and metabolism</li>
+                        </ul>
+                        <p>Guaranteed results are not promised.</p>
+                    </section>
 
-                <strong>4. Refund Policy</strong>
-                <p>Refund requests must be made within 30 days from the commencement of the program. No refunds will be issued after that.</p>
+                    <section>
+                        <strong>4. Refund Policy:</strong>
+                        <p>A refund request must be made within 30 days from the commencement of the program. No refunds will be issued after that. Refunds would be subject to a deduction for any sessions, materials, or consultations already delivered. In the event that the consultant is unable to continue services due to unforeseen circumstances, a pro-rated refund will be issued for any unused sessions.</p>
+                    </section>
 
-                <strong>5. Program Commitment</strong>
-                <p>The client agrees to actively participate and follow guidelines. Missed sessions do not qualify for refunds.</p>
+                    <section>
+                        <strong>5. Program Commitment:</strong>
+                        <ul>
+                            <li>The client agrees to actively participate and follow the program guidelines.</li>
+                            <li>Missed sessions or lack of adherence does not qualify for refunds or extensions unless agreed with the coach.</li>
+                        </ul>
+                    </section>
 
-                <div style={{marginTop: '25px', display: 'flex', alignItems: 'center', gap: '12px', padding: '15px', background: 'rgba(57, 75, 62, 0.05)', borderRadius: '8px', cursor: 'pointer'}}
-                     onClick={() => handleInputChange('agreed', !formData.agreed)}>
-                    <div className={styles.checkbox} style={{borderColor: 'var(--color-primary)', background: formData.agreed ? 'var(--color-primary)' : 'transparent'}}>
-                        {formData.agreed && <Check size={12} color="white" />}
-                    </div>
-                    <span style={{fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: 500}}>I have read and agree to the Terms & Conditions</span>
+                    <section>
+                        <strong>6. Confidentiality & Privacy</strong>
+                        <p>All personal and health-related information shared by the client will be treated with strict confidentiality. Client data will not be disclosed to any third party without the client’s permission. By enrolling, the client consents to communication via email, WhatsApp, or other agreed platforms for the purposes of delivering the program.</p>
+                    </section>
+
+                    <section>
+                        <strong>7. Intellectual Property</strong>
+                        <p>All meal plans, guides, educational materials, recipes, and resources provided during the program are the sole intellectual property of the consultant. These materials are for the personal use of the enrolled client only and may not be reproduced, shared, distributed, or sold without written permission.</p>
+                    </section>
+
+                    <section>
+                        <strong>8. Limitation of Liability</strong>
+                        <p>The consultant shall not be held liable for any adverse health outcomes, injuries, or complications that arise from the client’s failure to disclose relevant medical information, non-adherence to program guidelines, or actions taken contrary to the advice provided. The consultant’s total liability in any circumstance shall not exceed the total fees paid by the client for the current program period.</p>
+                    </section>
+
+                    <section>
+                        <strong>9. Termination:</strong>
+                        <p>The consultant reserves the right to terminate services if:</p>
+                        <ul>
+                            <li>Terms are violated</li>
+                            <li>Communication becomes inappropriate.</li>
+                        </ul>
+                    </section>
+
+                    <hr style={{ border: 'none', borderTop: '1px solid var(--color-border)', margin: '10px 0' }} />
+
+                    <section>
+                        <strong>Declaration & Informed Consent:</strong>
+                        <p>By signing/making the payment, I confirm that:</p>
+                        <ul style={{ fontSize: '0.85rem' }}>
+                            <li>I have read, understood, and agree to all of the Terms & Conditions set out above.</li>
+                            <li>I understand that this program provides nutrition and lifestyle guidance only and is not a substitute for professional medical care.</li>
+                            <li>I have disclosed all relevant health information truthfully and completely.</li>
+                            <li>I take full personal responsibility for my participation in this program and for any decisions I make regarding my health and diet.</li>
+                            <li>I am 18 years of age or older (or have obtained parental/guardian consent if under 18).</li>
+                        </ul>
+                    </section>
                 </div>
+              </div>
+
+              <div style={{marginTop: '25px', display: 'flex', alignItems: 'center', gap: '12px', padding: '15px', background: 'rgba(57, 75, 62, 0.05)', borderRadius: '8px', cursor: 'pointer'}}
+                   onClick={() => handleInputChange('agreed', !formData.agreed)}>
+                  <div className={styles.checkbox} style={{borderColor: 'var(--color-primary)', background: formData.agreed ? 'var(--color-primary)' : 'transparent'}}>
+                      {formData.agreed && <Check size={12} color="white" />}
+                  </div>
+                  <span style={{fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: 500}}>I have read, understood and agree to the Declaration & Consent</span>
               </div>
             </div>
           )}
