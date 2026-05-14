@@ -129,20 +129,22 @@ export const ApplyPage = () => {
 
   if (status === 'success') {
     return (
-      <div className={styles.page}>
+      <div className={styles.pageWrapper}>
         <Navbar />
-        <div className={styles.container}>
-          <div className={styles.successState}>
-            <div className={styles.successIcon}><Check size={32} /></div>
-            <h2 className={styles.title}>Application Received!</h2>
-            <p className={styles.subtitle}>
-              Thank you for taking the first step. Sonika will review your profile and reach out to you within 24 hours for the next steps.
-            </p>
-            <button onClick={() => window.location.href = '/'} className="btn btn-primary" style={{marginTop: '30px'}}>
-              Return Home
-            </button>
+        <main className={styles.mainContent}>
+          <div className={styles.container}>
+            <div className={styles.successState}>
+              <div className={styles.successIcon}><Check size={32} /></div>
+              <h2 className={styles.title}>Application Received!</h2>
+              <p className={styles.subtitle}>
+                Thank you for taking the first step. Sonika will review your profile and reach out to you within 24 hours for the next steps.
+              </p>
+              <button onClick={() => window.location.href = '/'} className="btn btn-primary" style={{marginTop: '30px'}}>
+                Return Home
+              </button>
+            </div>
           </div>
-        </div>
+        </main>
         <Footer />
       </div>
     );
@@ -151,15 +153,16 @@ export const ApplyPage = () => {
   const progress = (step / totalSteps) * 100;
 
   return (
-    <div className={styles.page}>
+    <div className={styles.pageWrapper}>
       <Navbar />
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>Begin Your Journey</h1>
-          <p className={styles.subtitle}>
-            Please answer honestly. This information helps us design the right protocol for your unique biology.
-          </p>
-        </div>
+      <main className={styles.mainContent}>
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <h1 className={styles.title}>Begin Your Journey</h1>
+            <p className={styles.subtitle}>
+              Please answer honestly. This information helps us design the right protocol for your unique biology.
+            </p>
+          </div>
 
         <div className={styles.progressBar}>
           <div className={styles.progressFill} style={{ width: `${progress}%` }}></div>
@@ -636,6 +639,7 @@ export const ApplyPage = () => {
           </div>
         </form>
       </div>
+      </main>
       <Footer />
     </div>
   );
