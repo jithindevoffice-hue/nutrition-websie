@@ -19,8 +19,8 @@ export const ProgramsPage = () => {
                     </div>
                     
                     <h1 className={styles.heroTitle}>
-                        Real Results. Real People.<br/>
-                        <span className="text-italic">Real Transformation.</span>
+                        Personalized programs.<br/>
+                        <span className="text-italic">Powerful outcomes.</span>
                     </h1>
                 </section>
 
