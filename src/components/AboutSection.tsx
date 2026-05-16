@@ -14,7 +14,7 @@ export const AboutSection = () => {
                                 <Award size={20} color="#b59c73" />
                             </div>
                             <div className={styles.badgeText}>
-                                <strong>Global Nutrition & Lifestyle Strategist</strong>
+                                <strong>Global Nutrition & Wellness Advisor</strong>
                                 <span>Internationally Accredited</span>
                             </div>
                         </div>
