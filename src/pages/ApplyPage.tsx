@@ -57,6 +57,7 @@ const INITIAL_DATA = {
 export const ApplyPage = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<Record<string, any>>(INITIAL_DATA);
+  const [dob, setDob] = useState({d: '', m: '', y: ''});
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
   const totalSteps = 7;
@@ -111,6 +112,8 @@ export const ApplyPage = () => {
         }
       }
     });
+
+    formPayload.append('pageHistory', '0,1,2');
 
     try {
       await fetch(GOOGLE_FORM_URL, {
@@ -179,7 +182,29 @@ export const ApplyPage = () => {
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>Date of Birth *</label>
-                <input required type="date" className={styles.input} value={formData['entry.1319396545']} onChange={e => handleInputChange('entry.1319396545', e.target.value)} />
+                <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1.5fr', gap: '10px'}}>
+                  <input required type="number" className={styles.input} placeholder="DD" min="1" max="31" 
+                    value={dob.d}
+                    onChange={e => {
+                        const newD = e.target.value;
+                        setDob(prev => { const next = {...prev, d: newD}; handleInputChange('entry.1319396545', `${next.y}-${next.m.padStart(2, '0')}-${next.d.padStart(2, '0')}`); return next; });
+                    }} 
+                  />
+                  <input required type="number" className={styles.input} placeholder="MM" min="1" max="12" 
+                    value={dob.m}
+                    onChange={e => {
+                        const newM = e.target.value;
+                        setDob(prev => { const next = {...prev, m: newM}; handleInputChange('entry.1319396545', `${next.y}-${next.m.padStart(2, '0')}-${next.d.padStart(2, '0')}`); return next; });
+                    }} 
+                  />
+                  <input required type="number" className={styles.input} placeholder="YYYY" min="1920" max={new Date().getFullYear()} 
+                    value={dob.y}
+                    onChange={e => {
+                        const newY = e.target.value;
+                        setDob(prev => { const next = {...prev, y: newY}; handleInputChange('entry.1319396545', `${next.y}-${next.m.padStart(2, '0')}-${next.d.padStart(2, '0')}`); return next; });
+                    }} 
+                  />
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
