@@ -77,7 +77,57 @@ export const ApplyPage = () => {
     });
   };
 
+  const validateStep = () => {
+    // Check HTML5 validity for native inputs (text, number, tel, email)
+    const form = document.querySelector('form');
+    if (form && !form.checkValidity()) {
+      form.reportValidity();
+      return false;
+    }
+
+    // Validate custom radio and checkbox groups for the current step
+    if (step === 1) {
+      if (!formData['entry.1647685996']) { alert('Please select your Gender'); return false; }
+      if (!formData['entry.179663427']) { alert('Please select your Marital Status'); return false; }
+    }
+    if (step === 2) {
+      if (formData['entry.42301960'].length === 0) { alert('Please select any conditions you have (or None)'); return false; }
+      if (formData['entry.630036857'].length === 0) { alert('Please select what is difficult to quit (or None)'); return false; }
+      if (!formData['entry.2134496881']) { alert('Please select if you are on medication'); return false; }
+      if (formData['entry.2134496881'] === 'Yes (please specify)' && !formData['entry.2134496881_other']) { alert('Please specify your medication'); return false; }
+    }
+    if (step === 3) {
+      if (!formData['entry.407393299']) { alert('Please select your daily activity level'); return false; }
+      if (!formData['entry.1713086454']) { alert('Please select your hours of sleep'); return false; }
+      if (!formData['entry.26597109']) { alert('Please select your stress level'); return false; }
+    }
+    if (step === 4) {
+      if (!formData['entry.2103927452']) { alert('Please select meals per day'); return false; }
+      if (!formData['entry.106715924']) { alert('Please select water intake'); return false; }
+      if (!formData['entry.775345826']) { alert('Please select if you experience cravings'); return false; }
+      if (!formData['entry.857416721']) { alert('Please select diet preference'); return false; }
+    }
+    if (step === 5) {
+      if (formData['entry.1393131544'].length === 0) { alert('Please select your current struggles (or None)'); return false; }
+      if (!formData['entry.989294290']) { alert('Please select if you suffer from allergies'); return false; }
+      if (formData['entry.989294290'] === 'Yes (please specify)' && !formData['entry.989294290_other']) { alert('Please specify your allergies'); return false; }
+      if (formData['entry.465322430'].length === 0) { alert('Please tick all that apply to you (or None)'); return false; }
+    }
+    if (step === 6) {
+      if (!formData['entry.1053807885']) { alert('Please select if you have tried weight loss before'); return false; }
+      if (formData['entry.921980163'].length === 0) { alert('Please select what all you have tried'); return false; }
+    }
+    if (step === 7) {
+      if (!formData['entry.2112990163']) { alert('Please confirm if you are ready to follow guidance'); return false; }
+      if (!formData['entry.1822505866']) { alert('Please confirm if you are willing to invest in your health'); return false; }
+      if (!formData['entry.1871346809']) { alert('Please select how soon you want to start'); return false; }
+      if (!formData['termsAccepted']) { alert('Please accept the Terms & Conditions'); return false; }
+    }
+    return true;
+  };
+
   const nextStep = () => {
+    if (!validateStep()) return;
     setStep((s) => Math.min(s + 1, totalSteps));
     window.scrollTo(0, 0);
   };
@@ -92,6 +142,7 @@ export const ApplyPage = () => {
       nextStep();
       return;
     }
+    if (!validateStep()) return;
 
     setStatus('submitting');
 
