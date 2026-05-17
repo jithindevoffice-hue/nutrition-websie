@@ -52,6 +52,7 @@ const INITIAL_DATA = {
   'entry.2112990163': '', // Are you ready to follow guidance seriously?
   'entry.1822505866': '', // Are you willing to invest in your health?
   'entry.1871346809': '', // How soon do you want to start?
+  agreed: false,
 };
 
 export const ApplyPage = () => {
@@ -98,10 +99,13 @@ export const ApplyPage = () => {
     const formPayload = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       if (key.endsWith('_other')) return; // Handle other later
+      if (key === 'agreed') return;
 
       if (Array.isArray(value)) {
         value.forEach((v) => formPayload.append(key, v));
       } else {
+        if (value === '' || value == null) return;
+
         // Special case for "Other..." options
         if (value === 'Other...' || value === 'Yes (please specify)') {
             const otherVal = formData[`${key}_other`];
@@ -112,8 +116,6 @@ export const ApplyPage = () => {
         }
       }
     });
-
-    formPayload.append('pageHistory', '0,1,2');
 
     try {
       await fetch(GOOGLE_FORM_URL, {
