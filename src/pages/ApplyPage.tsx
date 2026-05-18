@@ -64,7 +64,18 @@ export const ApplyPage = () => {
   const totalSteps = 7;
 
   const handleInputChange = (key: string, value: any) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
+    setFormData((prev) => {
+      const next = { ...prev, [key]: value };
+
+      if (key === 'entry.1053807885') {
+        next['entry.921980163'] =
+          value === 'No'
+            ? ['None / first time']
+            : prev['entry.921980163'].filter((option: string) => option !== 'None / first time');
+      }
+
+      return next;
+    });
   };
 
   const handleCheckboxToggle = (key: string, value: string) => {
@@ -139,6 +150,12 @@ export const ApplyPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (step === 5 && formData['entry.1053807885'] === 'Yes' && formData['entry.921980163'].length === 0) {
+      window.alert('Please tell us what you have tried before continuing.');
+      return;
+    }
+
     if (step < totalSteps) {
       nextStep();
       return;
@@ -153,6 +170,11 @@ export const ApplyPage = () => {
       if (key === 'agreed') return;
 
       if (Array.isArray(value)) {
+        if (key === 'entry.921980163' && value.length === 0 && formData['entry.1053807885'] === 'No') {
+          formPayload.append(key, 'None / first time');
+          return;
+        }
+
         value.forEach((v) => formPayload.append(key, v));
       } else {
         if (value === '' || value == null) return;
