@@ -182,7 +182,7 @@ export const ApplyPage = () => {
         // Special case for "Other..." options
         if (value === 'Other...' || value === 'Yes (please specify)') {
             const otherVal = formData[`${key}_other`];
-            formPayload.append(key, otherVal || '__other_option__');
+            formPayload.append(key, '__other_option__');
             formPayload.append(`${key}.other_option_response`, otherVal || '');
         } else {
             formPayload.append(key, value as string);
