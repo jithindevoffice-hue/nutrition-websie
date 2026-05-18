@@ -7,19 +7,23 @@ import { ProgramsPage } from './pages/ProgramsPage'
 import { ProcessPage } from './pages/ProcessPage'
 import { ApplyPage } from './pages/ApplyPage'
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage'
+import { ScrollToTop } from './components/ScrollToTop'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/programs" element={<ProgramsPage />} />
-      <Route path="/process" element={<ProcessPage />} />
-      <Route path="/apply" element={<ApplyPage />} />
-      <Route path="/profile" element={<ProfileFormPage />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-      <Route path="/terms-conditions" element={<PrivacyPolicyPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/programs" element={<ProgramsPage />} />
+        <Route path="/process" element={<ProcessPage />} />
+        <Route path="/apply" element={<ApplyPage />} />
+        <Route path="/profile" element={<ProfileFormPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-conditions" element={<PrivacyPolicyPage />} />
+      </Routes>
+    </>
   )
 }
 
