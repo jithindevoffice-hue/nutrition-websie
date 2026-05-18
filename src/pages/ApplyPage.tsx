@@ -113,16 +113,16 @@ export const ApplyPage = () => {
       if (!formData['entry.989294290']) { alert('Please select if you suffer from allergies'); return false; }
       if (formData['entry.989294290'] === 'Yes (please specify)' && !formData['entry.989294290_other']) { alert('Please specify your allergies'); return false; }
       if (formData['entry.465322430'].length === 0) { alert('Please tick all that apply to you (or None)'); return false; }
+      if (!formData['entry.1053807885']) { alert('Please select if you have tried weight loss before'); return false; }
+      if (formData['entry.1053807885'] === 'Yes' && formData['entry.921980163'].length === 0) { alert('Please select what all you have tried'); return false; }
     }
     if (step === 6) {
-      if (!formData['entry.1053807885']) { alert('Please select if you have tried weight loss before'); return false; }
-      if (formData['entry.921980163'].length === 0) { alert('Please select what all you have tried'); return false; }
-    }
-    if (step === 7) {
       if (!formData['entry.2112990163']) { alert('Please confirm if you are ready to follow guidance'); return false; }
       if (!formData['entry.1822505866']) { alert('Please confirm if you are willing to invest in your health'); return false; }
       if (!formData['entry.1871346809']) { alert('Please select how soon you want to start'); return false; }
-      if (!formData['termsAccepted']) { alert('Please accept the Terms & Conditions'); return false; }
+    }
+    if (step === 7) {
+      if (!formData.agreed) { alert('Please accept the Terms & Conditions'); return false; }
     }
     return true;
   };
