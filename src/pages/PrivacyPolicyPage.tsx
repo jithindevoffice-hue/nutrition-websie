@@ -43,11 +43,15 @@ export const PrivacyPolicyPage = () => {
                         </section>
 
                         <section>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', fontWeight: 600, color: 'var(--color-primary)' }}>4. Refund Policy</h3>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', fontWeight: 600, color: 'var(--color-primary)' }}>4. Cancellation & Refund Policy</h3>
                             <ul style={{ paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', listStyleType: 'disc' }}>
-                                <li>A refund request must be made within 30 days from the commencement of the program.</li>
-                                <li>No refunds will be issued after that.</li>
-                                <li>Refunds would be subject to a deduction for any sessions, materials, or consultations already delivered.</li>
+                                <li>Fees are exclusive of GST (18%), which is non-refundable.</li>
+                                <li>A ₹1,000 procedural charge applies on all cancellations.</li>
+                                <li>Cancellations within 48 hours receive a full program fee refund minus ₹1,000 procedural charges.</li>
+                                <li>Cancellations between Day 3–30 receive 50% of the monthly fee (₹3,000) plus ₹1,000 procedural charge.</li>
+                                <li>No refund is issued after Day 30.</li>
+                                <li>Approved refunds are processed within 7–10 business days to the original payment source.</li>
+                                <li>For rescheduling, 24 hours' notice is required — failing which the session is marked as attended.</li>
                                 <li>In the event that the consultant is unable to continue services due to unforeseen circumstances, a pro-rated refund will be issued for any unused sessions.</li>
                             </ul>
                         </section>
@@ -73,8 +77,9 @@ export const PrivacyPolicyPage = () => {
 
                         <section>
                             <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', fontWeight: 600, color: 'var(--color-primary)' }}>8. Limitation of Liability</h3>
-                            <p>The consultant shall not be held liable for any adverse health outcomes, injuries, or complications that arise from the client’s failure to disclose relevant medical information, non-adherence to program guidelines, or actions taken contrary to the advice provided.</p>
-                            <p style={{ marginTop: '0.75rem' }}>The consultant’s total liability in any circumstance shall not exceed the total fees paid by the client for the current program period.</p>
+                            <p>The Consultant shall not be liable for any health outcomes, injury, or damages arising from: (i) the Client's failure to disclose relevant medical information; (ii) non-adherence to prescribed program guidelines; or (iii) actions taken contrary to the Consultant's advice.</p>
+                            <p style={{ marginTop: '0.75rem' }}>The Consultant's total liability shall not exceed the fees paid by the Client for the current program period, regardless of the nature of the claim.</p>
+                            <p style={{ marginTop: '0.75rem' }}>All disputes shall be subject to the exclusive jurisdiction of the competent courts in Bangalore, India.</p>
                         </section>
 
                         <section>

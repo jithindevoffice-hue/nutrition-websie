@@ -188,7 +188,7 @@ export const ProgramsPage = () => {
                 <section className={styles.cta}>
                     <h2 className={styles.ctaQuote}>"Every journey begins with a single step. Let me walk it with you."</h2>
                     <p className={styles.ctaAuthor}>— Sonika Saraswathi Babu, Wellness Coach</p>
-                    <Link to="/apply" className="btn btn-primary">
+                    <Link to="/contact" className="btn btn-primary">
                         Book Your Pre-Consultation Today
                     </Link>
                 </section>

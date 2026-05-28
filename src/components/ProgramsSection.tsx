@@ -66,7 +66,7 @@ export const ProgramsSection = () => {
                             </div>
 
                             <div className={styles.cardFooter}>
-                                <Link to="/apply" className={styles.iconBtnDark}>
+                                <Link to="/contact" className={styles.iconBtnDark}>
                                     <ArrowUpRight size={20} color="white" />
                                 </Link>
                             </div>
@@ -88,7 +88,7 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Heal your second brain</p>
 
                             <div className={styles.cardFooterLight}>
-                                <Link to="/apply" className={styles.iconBtnLight}>
+                                <Link to="/contact" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </Link>
                             </div>
@@ -107,7 +107,7 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Recalibrate your thyroid naturally</p>
 
                             <div className={styles.cardFooterLight}>
-                                <Link to="/apply" className={styles.iconBtnLight}>
+                                <Link to="/contact" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </Link>
                             </div>
@@ -126,7 +126,7 @@ export const ProgramsSection = () => {
                             <p className={styles.cardDescDark}>Take back control of your blood sugar</p>
 
                             <div className={styles.cardFooterLight}>
-                                <Link to="/apply" className={styles.iconBtnLight}>
+                                <Link to="/contact" className={styles.iconBtnLight}>
                                     <ArrowUpRight size={16} />
                                 </Link>
                             </div>

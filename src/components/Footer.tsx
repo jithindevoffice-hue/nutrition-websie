@@ -45,7 +45,7 @@ export const Footer = () => {
                     <div className={styles.ctaColumn}>
                         <h4>Ready to transform?</h4>
                         <p>Join the waitlist for our next intake or book a discovery call today.</p>
-                        <Link to="/apply" className="btn btn-primary" style={{ marginTop: '1rem' }}>Begin Journey</Link>
+                        <Link to="/contact" className="btn btn-primary" style={{ marginTop: '1rem' }}>Begin Journey</Link>
                     </div>
                 </div>
 

@@ -6,6 +6,7 @@ import { AboutPage } from './pages/AboutPage'
 import { ProgramsPage } from './pages/ProgramsPage'
 import { ProcessPage } from './pages/ProcessPage'
 import { ApplyPage } from './pages/ApplyPage'
+import { ContactPage } from './pages/ContactPage'
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage'
 import { ScrollToTop } from './components/ScrollToTop'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/process" element={<ProcessPage />} />
         <Route path="/apply" element={<ApplyPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/profile" element={<ProfileFormPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms-conditions" element={<PrivacyPolicyPage />} />
